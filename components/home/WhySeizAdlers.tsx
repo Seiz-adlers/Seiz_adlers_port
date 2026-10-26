@@ -1,13 +1,16 @@
 import { principles } from "@/data/principles";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/motion/Reveal";
+import { ThreadLines } from "@/components/hero/ThreadLines";
 
-export function WhySeizAdlers() {
+export function WhySeizAdlers({ index = "08" }: { index?: string }) {
   return (
-    <section className="border-t border-hair bg-bg-secondary py-16 md:py-24">
+    <section className="relative isolate overflow-hidden border-t border-hair bg-bg-secondary py-16 md:py-24">
+      {/* the hero's hairline threads, parting around the cursor */}
+      <ThreadLines className="-z-10" color="rgba(20,18,14,0.09)" />
       <div className="container-fluid">
         <Reveal>
-          <SectionLabel index="08" label="Why Us" />
+          <SectionLabel index={index} label="Why Us" />
           <h2 className="mt-6 font-display text-[clamp(2rem,4.5vw,3.5rem)] font-semibold uppercase leading-[1.05] tracking-tight text-ink">
             Why Seiz Adlers?
           </h2>

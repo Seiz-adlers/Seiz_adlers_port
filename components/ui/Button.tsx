@@ -38,7 +38,12 @@ export function Button(props: LinkButtonProps | ActionButtonProps) {
   if ("href" in props && props.href) {
     return (
       <Magnetic>
-        <Link href={props.href} onClick={props.onClick} className={classes}>
+        <Link
+          href={props.href}
+          onClick={props.onClick}
+          data-cursor={variant === "primary" ? "open" : undefined}
+          className={classes}
+        >
           {children}
         </Link>
       </Magnetic>

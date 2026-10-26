@@ -1,18 +1,19 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { methodStages } from "@/data/method";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/motion/Reveal";
+import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 
-export function AdlerMethod() {
-  const reduceMotion = useReducedMotion();
+export function AdlerMethod({ index = "05" }: { index?: string }) {
+  const reduceMotion = useReducedMotionSafe();
 
   return (
     <section className="border-t border-hair bg-bg py-16 md:py-24">
       <div className="container-fluid">
         <Reveal>
-          <SectionLabel index="05" label="Process" />
+          <SectionLabel index={index} label="Process" />
           <h2 className="mt-6 font-display text-[clamp(2rem,4.5vw,3.5rem)] font-semibold uppercase leading-[1.05] tracking-tight text-ink">
             The Adler Method
           </h2>

@@ -1,6 +1,7 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/motion/Reveal";
 import { InsightsList } from "@/components/insights/InsightsList";
+import { ThreadLines } from "@/components/hero/ThreadLines";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata = buildMetadata({
@@ -11,7 +12,9 @@ export const metadata = buildMetadata({
 
 export default function InsightsPage() {
   return (
-    <>
+    <div className="relative isolate overflow-hidden">
+      {/* the hero's hairline threads, parting around the cursor */}
+      <ThreadLines className="-z-10" color="rgba(20,18,14,0.09)" />
       <section className="border-b border-hair pb-10 pt-28 md:pb-14 md:pt-36">
         <div className="container-fluid">
           <Reveal>
@@ -33,6 +36,6 @@ export default function InsightsPage() {
           </Reveal>
         </div>
       </section>
-    </>
+    </div>
   );
 }

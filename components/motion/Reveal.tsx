@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
+import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 
 interface RevealProps {
   children: ReactNode;
@@ -11,9 +12,8 @@ interface RevealProps {
   className?: string;
   as?: "div" | "span" | "li";
   /**
-   * When true, the reveal plays a single time and stays put. Default is
-   * false — the element re-animates every time it scrolls back into view,
-   * so the page always feels alive on the way up as well as down.
+   * Plays a single time by default, then stays put — content never hides
+   * again once read. Pass false to re-animate on every pass.
    */
   once?: boolean;
 }
@@ -25,9 +25,9 @@ export function Reveal({
   duration = 0.7,
   className,
   as = "div",
-  once = false,
+  once = true,
 }: RevealProps) {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotionSafe();
 
   // Motion-sensitive users get the content immediately with no in/out toggling.
   if (reduceMotion) {

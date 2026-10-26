@@ -11,6 +11,18 @@ export const technology = [
   "Vercel",
 ] as const;
 
+/** Marketing, measurement and automation tools the team works with. */
+export const growthStack = [
+  "Google Ads",
+  "Meta Ads",
+  "GA4",
+  "Google Tag Manager",
+  "Meta Pixel",
+  "Microsoft Clarity",
+  "Hotjar",
+  "WhatsApp Business API",
+] as const;
+
 export const benchmarks = [
   { label: "Performance", value: 99 },
   { label: "Accessibility", value: 100 },

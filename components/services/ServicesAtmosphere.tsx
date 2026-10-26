@@ -1,12 +1,13 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
+import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 
 /**
  * Full-bleed moving backdrop for the Services page — the "whole page under
  * something alive" moment in the light/dark alternation.
  *
- * It's a generated field, not stock footage: two slow warm light blooms
+ * It's a generated field, not stock footage: two slow blue light blooms
  * drifting behind the six service words tracking sideways at different
  * rates. Deliberately faint (a few percent opacity) so page copy stays the
  * focus, and frozen under prefers-reduced-motion.
@@ -19,7 +20,7 @@ import { motion, useReducedMotion } from "framer-motion";
 const SERVICE_WORDS = ["Brand", "Web", "SEO", "Performance", "Content", "Automation"];
 
 export function ServicesAtmosphere() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotionSafe();
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
@@ -34,7 +35,7 @@ export function ServicesAtmosphere() {
       <motion.div
         className="absolute -right-[12%] bottom-[2%] h-[52vmax] w-[52vmax] rounded-full"
         style={{
-          background: "radial-gradient(circle at 50% 50%, rgba(214,120,40,0.11), transparent 60%)",
+          background: "radial-gradient(circle at 50% 50%, rgba(0,87,168,0.1), transparent 60%)",
         }}
         animate={reduceMotion ? undefined : { x: [0, -75, 0], y: [0, -55, 0] }}
         transition={{ duration: 34, repeat: Infinity, ease: "easeInOut" }}

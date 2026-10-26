@@ -1,10 +1,11 @@
+import { isPlaceholder } from "@/lib/utils/placeholder";
+
 export interface TeamMember {
   id: string;
   name: string;
   role: string;
   bio: string;
   specialization: string;
-  image: string | null;
   initials: string;
   socials?: {
     linkedin?: string;
@@ -14,7 +15,8 @@ export interface TeamMember {
 }
 
 /**
- * Order is alphabetical by first name — intentionally, so array position
+ * No photographs, by the team's choice — each member is shown as a
+ * typographic monogram. Order is alphabetical by first name — intentionally, so array position
  * never reads as a ranking. Visual treatment in <TeamGrid> is identical
  * for every entry regardless of role. Confirmed data only; unverified
  * fields use "[INSERT ...]" placeholders rather than invented content.
@@ -26,7 +28,6 @@ export const team: TeamMember[] = [
     role: "[INSERT ROLE]",
     bio: "[INSERT BIO]",
     specialization: "[INSERT SPECIALIZATION]",
-    image: "/team/dinesh.jpg",
     initials: "DB",
     statement: "[INSERT STATEMENT]",
   },
@@ -36,7 +37,6 @@ export const team: TeamMember[] = [
     role: "[INSERT ROLE]",
     bio: "[INSERT BIO]",
     specialization: "[INSERT SPECIALIZATION]",
-    image: null,
     initials: "EK",
     statement: "[INSERT STATEMENT]",
   },
@@ -46,7 +46,6 @@ export const team: TeamMember[] = [
     role: "Founder & Managing Director",
     bio: "[INSERT BIO]",
     specialization: "[INSERT SPECIALIZATION]",
-    image: null,
     initials: "MM",
     statement: "[INSERT STATEMENT]",
   },
@@ -56,7 +55,6 @@ export const team: TeamMember[] = [
     role: "[INSERT ROLE]",
     bio: "[INSERT BIO]",
     specialization: "[INSERT SPECIALIZATION]",
-    image: "/team/nitheesh.jpg",
     initials: "NC",
     statement: "[INSERT STATEMENT]",
   },
@@ -66,8 +64,14 @@ export const team: TeamMember[] = [
     role: "[INSERT ROLE]",
     bio: "[INSERT BIO]",
     specialization: "[INSERT SPECIALIZATION]",
-    image: null,
     initials: "S",
     statement: "[INSERT STATEMENT]",
   },
 ];
+
+/**
+ * Roles are shown only once every member's role is confirmed. Showing one
+ * real title beside four "to be confirmed" placeholders would read as a
+ * hierarchy — exactly what the team presentation must avoid.
+ */
+export const rolesConfirmed = team.every((m) => !isPlaceholder(m.role));

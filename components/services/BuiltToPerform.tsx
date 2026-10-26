@@ -1,13 +1,13 @@
-import { technology, benchmarks } from "@/data/technology";
+import { technology, growthStack, benchmarks } from "@/data/technology";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/motion/Reveal";
 
-export function BuiltToPerform() {
+export function BuiltToPerform({ index = "02" }: { index?: string }) {
   return (
     <section className="border-t border-hair bg-bg-secondary py-14 md:py-20">
       <div className="container-fluid grid gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <SectionLabel index="02" label="Technology" />
+          <SectionLabel index={index} label="Technology" />
           <h2 className="mt-6 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold uppercase leading-[1.05] tracking-tight text-ink">
             Built to Perform.
           </h2>
@@ -15,13 +15,21 @@ export function BuiltToPerform() {
             Fast, accessible and scalable digital experiences engineered for real-world
             performance.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {technology.map((tech) => (
-              <span key={tech} className="border border-hair px-4 py-2 text-sm text-ink-secondary">
-                {tech}
-              </span>
-            ))}
-          </div>
+          {[
+            { label: "Build", items: technology },
+            { label: "Growth & measurement", items: growthStack },
+          ].map((group) => (
+            <div key={group.label} className="mt-8">
+              <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.15em] text-ink-muted">{group.label}</p>
+              <div className="flex flex-wrap gap-3">
+                {group.items.map((tech) => (
+                  <span key={tech} className="border border-hair px-4 py-2 text-sm text-ink-secondary">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </Reveal>
 
         <Reveal delay={0.15}>

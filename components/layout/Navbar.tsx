@@ -13,6 +13,9 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  // Unscrolled on the homepage the bar floats over the hero's photo and blue
+  // panel, where the grey secondary ink loses contrast — use white instead.
+  const overHero = pathname === "/" && !scrolled;
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
@@ -50,14 +53,7 @@ export function Navbar() {
       >
         <div className="container-fluid flex h-[76px] items-center justify-between">
           <Link href="/" className="relative z-10 flex items-center gap-2.5" aria-label="Seiz Adlers home">
-            <Image
-              src="/logo.png"
-              alt="Seiz Adlers"
-              width={36}
-              height={24}
-              className="h-8 w-auto object-contain"
-              priority
-            />
+            <Image src="/logo-mark.png" alt="" width={417} height={379} className="h-7 w-auto" priority />
             <span className="font-display text-[15px] font-semibold tracking-[0.08em] text-ink">
               SEIZ ADLERS
             </span>
@@ -72,7 +68,11 @@ export function Navbar() {
                   href={link.href}
                   aria-current={active ? "page" : undefined}
                   className={`relative text-[13px] font-medium uppercase tracking-[0.1em] transition-colors duration-300 ${
-                    active ? "text-ink" : "text-ink-secondary hover:text-ink"
+                    active
+                      ? "text-ink"
+                      : overHero
+                        ? "text-white/80 hover:text-white focus-visible:outline-white"
+                        : "text-ink-secondary hover:text-ink"
                   }`}
                 >
                   {link.label}
