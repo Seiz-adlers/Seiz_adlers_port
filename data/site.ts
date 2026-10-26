@@ -1,3 +1,12 @@
+export interface HeroPortrait {
+  /** Path under /public — must be licensed for use and free of baked-in text. */
+  src: string;
+  alt: string;
+  /** Centre of the face, as a CSS position. */
+  position?: string;
+  scale?: number;
+}
+
 export const siteConfig = {
   name: "SEIZ ADLERS",
   legalName: "Seiz Adlers",
@@ -11,6 +20,17 @@ export const siteConfig = {
   instagramHandle: "@seizadlers",
   linkedin: undefined as string | undefined,
   ogImage: "/logo.jpg",
+  /**
+   * Portrait for the homepage hero's dark panel (and its small detail crop).
+   * Decorative, so alt is empty. `position` is the face centre; `scale` the
+   * close-up zoom.
+   */
+  heroPortrait: {
+    src: "/imgg.jpg",
+    alt: "",
+    position: "50% 45%",
+    scale: 1.25,
+  } as HeroPortrait,
   keywords: [
     "brand identity",
     "website development",
@@ -21,14 +41,15 @@ export const siteConfig = {
   ],
 } as const;
 
-export const navLinks = [ 
-  { label: "Home", href: "/" },
+export const navLinks = [
+  { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
 ] as const;
 
 export const footerLinks = [
+  { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },

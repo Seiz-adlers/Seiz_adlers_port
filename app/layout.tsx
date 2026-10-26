@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Caveat } from "next/font/google";
+import { Inter, Space_Grotesk, Caveat, Instrument_Serif } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { RouteTheme } from "@/components/motion/RouteTheme";
 import { PageViewTracker } from "@/components/analytics/PageViewTracker";
+import { CustomCursor } from "@/components/motion/CustomCursor";
 import { siteConfig } from "@/data/site";
 import { buildMetadata, organizationSchema, websiteSchema } from "@/lib/seo/metadata";
 
@@ -29,6 +30,14 @@ const caveat = Caveat({
   weight: ["600"],
 });
 
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument-serif",
+  display: "swap",
+  weight: ["400"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   ...buildMetadata({
     title: siteConfig.tagline,
@@ -36,7 +45,6 @@ export const metadata: Metadata = {
     path: "/",
   }),
   metadataBase: new URL(siteConfig.url),
-  icons: { icon: "/logo.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -45,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       data-theme="dark"
       suppressHydrationWarning
-      className={`${inter.variable} ${spaceGrotesk.variable} ${caveat.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${caveat.variable} ${instrumentSerif.variable}`}
     >
       <head>
         <script
@@ -71,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <PageViewTracker />
+        <CustomCursor />
         <RouteTheme />
         <SmoothScroll>
           <Navbar />

@@ -4,13 +4,13 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { InsightCard } from "@/components/insights/InsightCard";
 import { Reveal } from "@/components/motion/Reveal";
 
-export function InsightsPreview() {
+export function InsightsPreview({ index = "09" }: { index?: string }) {
   return (
     <section id="insights" className="border-t border-hair bg-bg-secondary py-16 md:py-24">
       <div className="container-fluid">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <Reveal>
-            <SectionLabel index="09" label="Insights" />
+            <SectionLabel index={index} label="Insights" />
             <h2 className="mt-6 font-display text-[clamp(2rem,4.5vw,3.5rem)] font-semibold uppercase leading-[1.05] tracking-tight text-ink">
               Insights
             </h2>

@@ -10,8 +10,6 @@ export const projectTypes = [
   "Something Else",
 ] as const;
 
-export const timelines = ["ASAP", "1–3 Months", "3–6 Months", "Exploring"] as const;
-
 /**
  * Ranges are placeholders until real pricing is confirmed — edit freely,
  * never treat as final pricing commitments.

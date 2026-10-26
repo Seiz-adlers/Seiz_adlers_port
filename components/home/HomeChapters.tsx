@@ -6,14 +6,23 @@ import { getRouteTheme } from "@/lib/theme/routeTheme";
 import { Chapter } from "@/components/home/Chapter";
 
 /**
- * Homepage chapter order + theme. The homepage is deliberately short —
- * hero, a single introduction, and the closing call to action. Everything
- * else lives on Services / About / Insights, reached from the nav.
- * Keep in step with app/page.tsx.
+ * Homepage chapter themes, in the order of app/page.tsx. Mostly the dark
+ * system (the brand is ~75% black); two warm-paper chapters break the rhythm
+ * at the introduction and the principles.
  */
 const THEMES: Array<"dark" | "light"> = [
   "dark", // Hero
-  "light", // Introduction (Not Another Agency)
+  "light", // Not Another Agency
+  "dark", // Proof band (brand blue)
+  "dark", // Selected Work
+  "dark", // What We Build
+  "light", // Industries
+  "dark", // The Adler Method
+  "dark", // Creative + Engineering
+  "dark", // Team
+  "light", // Why Seiz Adlers
+  "dark", // Manifesto
+  "dark", // Insights
   "dark", // Let's Build Something Great
 ];
 

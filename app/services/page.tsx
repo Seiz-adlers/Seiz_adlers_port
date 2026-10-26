@@ -3,6 +3,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ServicesAccordion } from "@/components/services/ServicesAccordion";
 import { ServicesAtmosphere } from "@/components/services/ServicesAtmosphere";
 import { BuiltToPerform } from "@/components/services/BuiltToPerform";
+import { ServicePillars, AdditionalServices } from "@/components/services/ServicePillars";
 import { Reveal } from "@/components/motion/Reveal";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -40,7 +41,9 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <BuiltToPerform />
+        <ServicePillars index="02" />
+        <AdditionalServices index="03" />
+        <BuiltToPerform index="04" />
       </div>
     </>
   );

@@ -3,13 +3,13 @@ import { Reveal } from "@/components/motion/Reveal";
 
 const inputs = ["Code", "Design", "Data", "Performance", "Automation", "Analytics"];
 
-export function CreativeEngineering() {
+export function CreativeEngineering({ index = "06" }: { index?: string }) {
   return (
     <section className="border-t border-hair bg-bg-secondary py-16 md:py-24">
       <div className="container-fluid">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
           <Reveal>
-            <SectionLabel index="06" label="How We Work" />
+            <SectionLabel index={index} label="How We Work" />
             <h2 className="mt-6 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-semibold uppercase leading-[1.05] tracking-tight text-ink text-balance">
               Creative thinking.
               <br />

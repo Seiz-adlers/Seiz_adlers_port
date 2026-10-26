@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { ThreadLines } from "@/components/hero/ThreadLines";
+import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 
 const words = ["Strategy", "Brand", "Experience", "Technology", "Growth"];
 
@@ -23,10 +25,12 @@ const item: Variants = {
 };
 
 export function NotAnotherAgency() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useReducedMotionSafe();
 
   return (
-    <section className="border-t border-hair bg-bg py-14 md:py-20">
+    <section className="relative isolate overflow-hidden border-t border-hair bg-bg py-14 md:py-20">
+      {/* the hero's hairline threads, continued onto the paper */}
+      <ThreadLines className="-z-10" color="rgba(20,18,14,0.09)" />
       <div className="container-fluid grid gap-16 lg:grid-cols-2 lg:gap-24">
         <div>
           <SectionLabel index="01" label="Introduction" />

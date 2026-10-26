@@ -3,12 +3,12 @@ import type { Service } from "@/data/services";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
-import { ServiceViewTracker } from "@/components/analytics/ServiceViewTracker";
+import { ViewTracker } from "@/components/analytics/ViewTracker";
 
 export function ServicePageTemplate({ service, reversed }: { service: Service; reversed: boolean }) {
   return (
     <>
-      <ServiceViewTracker slug={service.slug} />
+      <ViewTracker event="service_view" slug={service.slug} />
       <section className="border-b border-hair pb-10 pt-28 md:pb-14 md:pt-36">
         <div className="container-fluid">
           <Reveal>

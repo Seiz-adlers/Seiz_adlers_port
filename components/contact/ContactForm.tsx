@@ -4,59 +4,60 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { AnimatePresence, motion } from "framer-motion";
-import { projectTypes, timelines, budgetRanges } from "@/data/contact";
+import { projectTypes, budgetRanges } from "@/data/contact";
 import { Button } from "@/components/ui/Button";
 import { track } from "@/lib/analytics/track";
+import { cn } from "@/lib/utils/cn";
 
 const schema = z.object({
-  projectType: z.enum(projectTypes as unknown as [string, ...string[]], {
-    errorMap: () => ({ message: "Choose what you're looking to build." }),
-  }),
-  projectDetails: z.string().min(10, "Tell us a little more — at least 10 characters."),
-  timeline: z.enum(timelines as unknown as [string, ...string[]], {
-    errorMap: () => ({ message: "Choose a timeline." }),
-  }),
-  budget: z.enum(budgetRanges as unknown as [string, ...string[]], {
-    errorMap: () => ({ message: "Choose a budget range." }),
-  }),
-  name: z.string().min(1, "Your name is required."),
-  email: z.string().email("Enter a valid email."),
-  company: z.string().min(1, "Company is required."),
+  name: z.string().trim().min(1, "Your name is required."),
+  email: z.string().trim().email("Enter a valid email."),
+  company: z.string().optional(),
   phone: z.string().optional(),
+  services: z.array(z.string()).optional(),
+  budget: z.string().optional(),
+  projectDetails: z.string().trim().min(10, "Tell us a little more — at least 10 characters."),
+  website: z.string().optional(),
 });
 
 type ContactFormValues = z.infer<typeof schema>;
 
-const steps = [
-  { fields: ["projectType"] as const, title: "What are you looking to build?" },
-  { fields: ["projectDetails"] as const, title: "Tell us about the project" },
-  { fields: ["timeline"] as const, title: "What is your timeline?" },
-  { fields: ["budget"] as const, title: "Budget range" },
-  { fields: ["name", "email", "company", "phone"] as const, title: "Contact information" },
-];
+const fieldClass =
+  "block min-h-[52px] w-full rounded-md border border-white/15 bg-white/[0.04] px-4 py-3 text-[15px] text-ink outline-none transition-[border-color,background-color,box-shadow] duration-200 placeholder:text-ink-muted/70 hover:border-white/25 focus:border-blue-bright focus:bg-white/[0.06] focus:shadow-[0_0_0_3px_rgba(0,168,255,0.18)] aria-[invalid=true]:border-red-400/80 aria-[invalid=true]:shadow-[0_0_0_3px_rgba(248,113,113,0.15)]";
 
-const ease = [0.16, 1, 0.3, 1] as const;
+const labelClass = "mb-2 block text-[12px] font-medium uppercase tracking-[0.12em] text-ink-secondary";
 
+function FieldError({ id, message }: { id: string; message?: string }) {
+  if (!message) return null;
+  return (
+    <p id={id} role="alert" className="mt-2 text-sm text-red-400">
+      {message}
+    </p>
+  );
+}
+
+/** Single-step enquiry form: three required fields, everything else optional. */
 export function ContactForm() {
-  const [step, setStep] = useState(0);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [started, setStarted] = useState(false);
 
   const {
     register,
     handleSubmit,
-    trigger,
     watch,
     formState: { errors },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(schema),
-    mode: "onSubmit",
+    defaultValues: { services: [], budget: "" },
   });
 
-  const values = watch();
+  const selected = watch("services") ?? [];
+  const budget = watch("budget");
 
-  function goBack() {
-    setStep((s) => Math.max(s - 1, 0));
+  function markStarted() {
+    if (started) return;
+    setStarted(true);
+    track("contact_start");
   }
 
   async function onSubmit(data: ContactFormValues) {
@@ -77,225 +78,141 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="py-16 text-center">
-        <p className="font-display text-3xl font-semibold uppercase tracking-tight text-ink md:text-4xl">
+      <div className="flex min-h-[420px] flex-col items-start justify-center" role="status">
+        <span className="grid h-12 w-12 place-items-center rounded-full bg-blue-bright text-xl text-white" aria-hidden>
+          ✓
+        </span>
+        <p className="mt-8 font-display text-3xl font-semibold uppercase tracking-tight text-ink md:text-4xl">
           We&rsquo;ve Got It.
         </p>
-        <p className="mt-4 text-ink-secondary">
-          One of the Seiz Adlers team will get back to you shortly.
-        </p>
+        <p className="mt-4 max-w-sm text-ink-secondary">One of the Seiz Adlers team will get back to you shortly.</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate>
-      <div className="mb-10 flex items-center gap-2" aria-hidden>
-        {steps.map((_, i) => (
-          <span
-            key={i}
-            className={`h-1 flex-1 rounded-full transition-colors duration-500 ${
-              i <= step ? "bg-blue-bright" : "bg-hair"
-            }`}
-          />
-        ))}
+    <form onSubmit={handleSubmit(onSubmit)} onFocusCapture={markStarted} noValidate>
+      {/* Honeypot: off-screen and skipped by keyboard/AT; bots fill it in. */}
+      <div aria-hidden className="absolute -left-[9999px] h-px w-px overflow-hidden">
+        <label htmlFor="website">Website</label>
+        <input id="website" tabIndex={-1} autoComplete="off" {...register("website")} />
       </div>
-      <p className="mb-2 text-[12px] font-medium uppercase tracking-[0.15em] text-ink-muted">
-        Step {step + 1} of {steps.length}
-      </p>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={step}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -16 }}
-          transition={{ duration: 0.4, ease }}
-        >
-          <h2 className="mb-8 font-display text-2xl font-semibold uppercase tracking-tight text-ink md:text-3xl">
-            {steps[step].title}
-          </h2>
-
-          {step === 0 && (
-            <fieldset>
-              <legend className="sr-only">What are you looking to build?</legend>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {projectTypes.map((type) => (
-                  <label
-                    key={type}
-                    className={`flex min-h-[44px] cursor-pointer items-center justify-center border px-4 py-3 text-center text-sm transition-colors duration-300 ${
-                      values.projectType === type
-                        ? "border-blueline bg-blue/10 text-blue-bright"
-                        : "border-hair text-ink-secondary hover:border-white/25"
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      value={type}
-                      {...register("projectType")}
-                      className="sr-only"
-                    />
-                    {type}
-                  </label>
-                ))}
-              </div>
-              {errors.projectType && (
-                <p className="mt-3 text-sm text-red-400">{errors.projectType.message}</p>
-              )}
-            </fieldset>
-          )}
-
-          {step === 1 && (
-            <div>
-              <label htmlFor="projectDetails" className="sr-only">
-                Tell us about the project
+      <div className="grid gap-x-5 gap-y-6 sm:grid-cols-2">
+        {(
+          [
+            { name: "name", label: "Your name", required: true, placeholder: "e.g. Priya Sharma", type: "text", autoComplete: "name" },
+            { name: "email", label: "Email", required: true, placeholder: "you@company.com", type: "email", autoComplete: "email" },
+            { name: "company", label: "Company", required: false, placeholder: "Company or brand name", type: "text", autoComplete: "organization" },
+            { name: "phone", label: "Phone", required: false, placeholder: "+91 98765 43210", type: "tel", autoComplete: "tel" },
+          ] as const
+        ).map((field) => {
+          const error = errors[field.name]?.message;
+          return (
+            <div key={field.name}>
+              <label htmlFor={field.name} className={labelClass}>
+                {field.label}
+                {field.required ? (
+                  <span className="ml-1 text-blue-bright" aria-hidden>
+                    *
+                  </span>
+                ) : (
+                  <span className="ml-2 normal-case tracking-normal text-ink-muted">optional</span>
+                )}
               </label>
-              <textarea
-                id="projectDetails"
-                rows={7}
-                {...register("projectDetails")}
-                placeholder="What are you building, where are you stuck, or where do you want to go?"
-                className="w-full resize-none border border-hair bg-transparent p-5 text-ink placeholder:text-ink-muted focus-visible:border-blueline"
+              <input
+                id={field.name}
+                type={field.type}
+                autoComplete={field.autoComplete}
+                placeholder={field.placeholder}
+                required={field.required}
+                {...register(field.name)}
+                aria-invalid={error ? true : undefined}
+                aria-describedby={error ? `${field.name}-error` : undefined}
+                className={fieldClass}
               />
-              {errors.projectDetails && (
-                <p className="mt-3 text-sm text-red-400">{errors.projectDetails.message}</p>
+              <FieldError id={`${field.name}-error`} message={error} />
+            </div>
+          );
+        })}
+      </div>
+
+      <fieldset className="mt-10">
+        <legend className="text-[12px] font-medium uppercase tracking-[0.12em] text-ink-secondary">
+          What can we help with? <span className="normal-case tracking-normal">(pick any)</span>
+        </legend>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {projectTypes.map((type) => {
+            const on = selected.includes(type);
+            return (
+              <label
+                key={type}
+                className={cn(
+                  "inline-flex min-h-[42px] cursor-pointer items-center rounded-full border px-4 text-sm transition-colors duration-300 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-blue-bright",
+                  on ? "border-blue-bright bg-blue-bright text-white" : "border-white/15 bg-white/[0.03] text-ink-secondary hover:border-white/30 hover:text-ink",
+                )}
+              >
+                <input type="checkbox" value={type} {...register("services")} className="sr-only" />
+                {type}
+              </label>
+            );
+          })}
+        </div>
+      </fieldset>
+
+      <fieldset className="mt-8">
+        <legend className="text-[12px] font-medium uppercase tracking-[0.12em] text-ink-secondary">
+          Budget <span className="normal-case tracking-normal">(optional — a starting point, not a quote)</span>
+        </legend>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {budgetRanges.map((range) => (
+            <label
+              key={range}
+              className={cn(
+                "inline-flex min-h-[42px] cursor-pointer items-center rounded-full border px-4 text-sm transition-colors duration-300 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-blue-bright",
+                budget === range ? "border-ink bg-ink text-bg" : "border-white/15 bg-white/[0.03] text-ink-secondary hover:border-white/30 hover:text-ink",
               )}
-            </div>
-          )}
+            >
+              <input type="radio" value={range} {...register("budget")} className="sr-only" />
+              {range}
+            </label>
+          ))}
+        </div>
+      </fieldset>
 
-          {step === 2 && (
-            <fieldset>
-              <legend className="sr-only">What is your timeline?</legend>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {timelines.map((t) => (
-                  <label
-                    key={t}
-                    className={`flex min-h-[44px] cursor-pointer items-center justify-center border px-4 py-3 text-center text-sm transition-colors duration-300 ${
-                      values.timeline === t
-                        ? "border-blueline bg-blue/10 text-blue-bright"
-                        : "border-hair text-ink-secondary hover:border-white/25"
-                    }`}
-                  >
-                    <input type="radio" value={t} {...register("timeline")} className="sr-only" />
-                    {t}
-                  </label>
-                ))}
-              </div>
-              {errors.timeline && <p className="mt-3 text-sm text-red-400">{errors.timeline.message}</p>}
-            </fieldset>
-          )}
-
-          {step === 3 && (
-            <fieldset>
-              <legend className="sr-only">Budget range</legend>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {budgetRanges.map((b) => (
-                  <label
-                    key={b}
-                    className={`flex min-h-[44px] cursor-pointer items-center justify-center border px-4 py-3 text-center text-sm transition-colors duration-300 ${
-                      values.budget === b
-                        ? "border-blueline bg-blue/10 text-blue-bright"
-                        : "border-hair text-ink-secondary hover:border-white/25"
-                    }`}
-                  >
-                    <input type="radio" value={b} {...register("budget")} className="sr-only" />
-                    {b}
-                  </label>
-                ))}
-              </div>
-              {errors.budget && <p className="mt-3 text-sm text-red-400">{errors.budget.message}</p>}
-              <p className="mt-4 text-sm text-ink-muted">
-                Ranges are a starting point, not a final quote.
-              </p>
-            </fieldset>
-          )}
-
-          {step === 4 && (
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label htmlFor="name" className="mb-2 block text-[12px] uppercase tracking-[0.1em] text-ink-muted">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  {...register("name")}
-                  className="min-h-[44px] w-full border border-hair bg-transparent px-4 py-3 text-ink focus-visible:border-blueline"
-                />
-                {errors.name && <p className="mt-2 text-sm text-red-400">{errors.name.message}</p>}
-              </div>
-              <div>
-                <label htmlFor="email" className="mb-2 block text-[12px] uppercase tracking-[0.1em] text-ink-muted">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  {...register("email")}
-                  className="min-h-[44px] w-full border border-hair bg-transparent px-4 py-3 text-ink focus-visible:border-blueline"
-                />
-                {errors.email && <p className="mt-2 text-sm text-red-400">{errors.email.message}</p>}
-              </div>
-              <div>
-                <label htmlFor="company" className="mb-2 block text-[12px] uppercase tracking-[0.1em] text-ink-muted">
-                  Company
-                </label>
-                <input
-                  id="company"
-                  {...register("company")}
-                  className="min-h-[44px] w-full border border-hair bg-transparent px-4 py-3 text-ink focus-visible:border-blueline"
-                />
-                {errors.company && <p className="mt-2 text-sm text-red-400">{errors.company.message}</p>}
-              </div>
-              <div>
-                <label htmlFor="phone" className="mb-2 block text-[12px] uppercase tracking-[0.1em] text-ink-muted">
-                  Phone (optional)
-                </label>
-                <input
-                  id="phone"
-                  {...register("phone")}
-                  className="min-h-[44px] w-full border border-hair bg-transparent px-4 py-3 text-ink focus-visible:border-blueline"
-                />
-              </div>
-            </div>
-          )}
-        </motion.div>
-      </AnimatePresence>
+      <div className="mt-10">
+        <label htmlFor="projectDetails" className={labelClass}>
+          Tell us about the project
+          <span className="ml-1 text-blue-bright" aria-hidden>
+            *
+          </span>
+        </label>
+        <textarea
+          id="projectDetails"
+          rows={5}
+          required
+          placeholder="What are you building, where are you stuck, or where do you want to go?"
+          {...register("projectDetails")}
+          aria-invalid={errors.projectDetails ? true : undefined}
+          aria-describedby={errors.projectDetails ? "projectDetails-error" : undefined}
+          className={cn(fieldClass, "min-h-[140px] resize-y")}
+        />
+        <FieldError id="projectDetails-error" message={errors.projectDetails?.message} />
+      </div>
 
       {status === "error" && (
-        <p className="mt-6 text-sm text-red-400">Something went wrong. Please try again.</p>
+        <p role="alert" className="mt-6 text-sm text-red-400">
+          Something went wrong — your message wasn&rsquo;t sent. Please try again, or email us directly.
+        </p>
       )}
 
-      <div className="mt-10 flex items-center justify-between gap-4">
-        {step > 0 ? (
-          <button
-            type="button"
-            onClick={goBack}
-            className="min-h-[44px] text-[13px] font-medium uppercase tracking-[0.1em] text-ink-secondary hover:text-ink"
-          >
-            ← Back
-          </button>
-        ) : (
-          <span />
-        )}
-
-        {step < steps.length - 1 ? (
-          <Button
-            onClick={() => {
-              void (async () => {
-                const valid = await trigger(steps[step].fields as unknown as (keyof ContactFormValues)[]);
-                if (!valid) return;
-                if (step === 0) track("contact_start");
-                setStep((s) => Math.min(s + 1, steps.length - 1));
-              })();
-            }}
-          >
-            Next →
-          </Button>
-        ) : (
-          <Button type="submit" disabled={status === "submitting"}>
-            {status === "submitting" ? "Sending…" : "Start the Conversation →"}
-          </Button>
-        )}
+      <div className="mt-10 flex flex-col-reverse items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs text-ink-muted">
+          <span className="text-blue-bright">*</span> Required. We only use your details to reply.
+        </p>
+        <Button type="submit" disabled={status === "submitting"}>
+          {status === "submitting" ? "Sending…" : "Start the Conversation →"}
+        </Button>
       </div>
     </form>
   );

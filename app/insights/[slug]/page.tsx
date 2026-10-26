@@ -16,6 +16,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
     title: insight.title,
     description: insight.excerpt,
     path: `/insights/${insight.slug}`,
+    // Unpublished drafts are thin placeholder pages — keep them out of search.
+    noIndex: insight.draft,
   });
 }
 
@@ -25,14 +27,16 @@ export default function InsightPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            articleSchema({ title: insight.title, excerpt: insight.excerpt, date: insight.date, slug: insight.slug })
-          ),
-        }}
-      />
+      {!insight.draft && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              articleSchema({ title: insight.title, excerpt: insight.excerpt, date: insight.date, slug: insight.slug }),
+            ),
+          }}
+        />
+      )}
 
       <section className="flex min-h-[70vh] items-center border-b border-hair pt-32">
         <div className="container-fluid max-w-2xl text-center">
@@ -54,7 +58,7 @@ export default function InsightPage({ params }: { params: { slug: string } }) {
             )}
           </Reveal>
           <Reveal delay={0.15} className="mt-10 flex justify-center">
-            <Button href="/contact">Connect with Us →</Button>
+            <Button href="/contact">Start a Project →</Button>
           </Reveal>
         </div>
       </section>
