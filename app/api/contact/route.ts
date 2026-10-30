@@ -16,7 +16,7 @@ const contactSchema = z.object({
 
 type ContactSubmission = z.infer<typeof contactSchema>;
 
-function escapeHtml(value: string) {
+function escapeHtml(value: string) {  
   return value
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
