@@ -13,8 +13,8 @@ import { ThreadLines } from "./ThreadLines";
  * close-up on the left, a solid brand-blue panel on the right, laid like a
  * print on a blurred, grainy copy of the portrait.
  *
- * The blue panel carries two small editorial frames — a tight detail crop of
- * the portrait and the eagle mark — rather than photos of people, so the hero
+ * The blue panel carries two small editorial frames - a tight detail crop of
+ * the portrait and the eagle mark - rather than photos of people, so the hero
  * stays about the brand. The team has its own section further down.
  *
  * All entrance motion is CSS (globals.css), so it plays on first paint and
@@ -23,7 +23,7 @@ import { ThreadLines } from "./ThreadLines";
 
 const portrait = siteConfig.heroPortrait;
 
-/** Inset of the framed card from the viewport — matches the navbar's container gutter. */
+/** Inset of the framed card from the viewport - matches the navbar's container gutter. */
 const FRAME = "px-[clamp(1.25rem,5vw,5rem)] pb-[clamp(1.25rem,4.5vw,4.5rem)] pt-[76px] lg:pt-[88px]";
 /** Card height: the viewport minus the frame's top and bottom inset. */
 const CARD_HEIGHT = "lg:min-h-[calc(100svh_-_88px_-_clamp(1.25rem,4.5vw,4.5rem))]";
@@ -38,7 +38,7 @@ function delay(ms: number): CSSProperties {
   return { animationDelay: `${ms}ms` };
 }
 
-/** Where the face centre should land in the panel — eyes just above middle, type over the hair. */
+/** Where the face centre should land in the panel - eyes just above middle, type over the hair. */
 const FACE_TARGET = { x: 50, y: 55 };
 
 /**
@@ -67,7 +67,7 @@ function closeUp(position = "50% 35%", scale = 1): CSSProperties {
   } as CSSProperties;
 }
 
-/** Masked line reveal — the word slides up from behind its own baseline. */
+/** Masked line reveal - the word slides up from behind its own baseline. */
 function Line({ children, ms }: { children: string; ms: number }) {
   return (
     <span className="block overflow-hidden pb-[0.04em]">
@@ -91,7 +91,7 @@ export function Hero() {
 
       {/* Frame backdrop: the portrait again, enlarged and softly blurred into
           grey light-and-shadow shapes, with heavy film grain and a dark
-          vignette at the outer edge — the card reads as a print laid on top. */}
+          vignette at the outer edge - the card reads as a print laid on top. */}
       <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden bg-[#4d4d4d]">
         <Image
           src={portrait.src}
@@ -170,7 +170,7 @@ export function Hero() {
         </div>
 
         {/* ── Blue panel ───────────────────────────────────────────── */}
-        {/* Mobile: a simple stack. Desktop: fixed zones that never overlap —
+        {/* Mobile: a simple stack. Desktop: fixed zones that never overlap -
             detail frame top-centre, headline middle-left, mark bottom-right,
             actions bottom-left. */}
         <div
@@ -190,7 +190,7 @@ export function Hero() {
               <Line ms={760}>Remember.</Line>
             </p>
             <p className={cn("hero-fade mt-5 max-w-[30ch]", SMALL)} style={delay(900)}>
-              Strategy, creative, technology and growth — brought together under one roof.
+              Strategy, creative, technology and growth - brought together under one roof.
             </p>
           </div>
 
@@ -222,7 +222,7 @@ export function Hero() {
             </Link>
           </div>
 
-          {/* Editorial frames — decorative, so hidden from assistive tech. */}
+          {/* Editorial frames - decorative, so hidden from assistive tech. */}
           <div aria-hidden className="relative mt-12 grid grid-cols-[3fr_2fr] items-end gap-4 lg:contents">
             {/* tight detail crop of the portrait's eyes */}
             <div

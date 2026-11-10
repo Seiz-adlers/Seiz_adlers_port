@@ -10,7 +10,7 @@ const contactSchema = z.object({
   services: z.array(z.string().max(100)).max(20).optional(),
   budget: z.string().max(100).optional(),
   projectDetails: z.string().trim().min(10).max(5000),
-  /** Honeypot — hidden from people, filled in by naive bots. */
+  /** Honeypot - hidden from people, filled in by naive bots. */
   website: z.string().max(0).optional(),
 });
 
@@ -42,7 +42,7 @@ function renderEmail(data: ContactSubmission) {
 
 /**
  * Delivers submissions by email through Resend (https://resend.com) using
- * its REST API directly — no SDK dependency. Configure in the environment:
+ * its REST API directly - no SDK dependency. Configure in the environment:
  *
  *   RESEND_API_KEY      required in production
  *   CONTACT_TO_EMAIL    defaults to siteConfig.email
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
 
   const data = parsed.data;
 
-  // Bot filled the honeypot — pretend success, send nothing.
+  // Bot filled the honeypot - pretend success, send nothing.
   if (data.website) return NextResponse.json({ ok: true });
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
   if (!apiKey) {
     if (process.env.NODE_ENV !== "production") {
       // eslint-disable-next-line no-console
-      console.log("[contact] RESEND_API_KEY not set — submission not delivered:", data);
+      console.log("[contact] RESEND_API_KEY not set - submission not delivered:", data);
       return NextResponse.json({ ok: true });
     }
     // eslint-disable-next-line no-console
@@ -85,7 +85,7 @@ export async function POST(request: Request) {
       from: process.env.CONTACT_FROM_EMAIL ?? "Seiz Adlers Website <onboarding@resend.dev>",
       to: [process.env.CONTACT_TO_EMAIL ?? siteConfig.email],
       reply_to: data.email,
-      subject: `New project enquiry — ${data.name}${data.company ? ` (${data.company})` : ""}`,
+      subject: `New project enquiry - ${data.name}${data.company ? ` (${data.company})` : ""}`,
       html: renderEmail(data),
     }),
   }).catch(() => null);

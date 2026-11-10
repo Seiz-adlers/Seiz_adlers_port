@@ -6,7 +6,7 @@ import { Reveal } from "@/components/motion/Reveal";
 
 /**
  * Real client quotes from data/testimonials.ts. Until one exists, the
- * section shows how we work — written as our principles, never styled as
+ * section shows how we work - written as our principles, never styled as
  * a client's words.
  */
 export function Testimonials({ index }: { index: string }) {
@@ -53,7 +53,7 @@ export function Testimonials({ index }: { index: string }) {
             </h2>
           </div>
           <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-ink-muted">
-            Client testimonials — coming soon
+            Client testimonials - coming soon
           </p>
         </Reveal>
 

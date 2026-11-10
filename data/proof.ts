@@ -1,10 +1,10 @@
 /**
  * Headline proof points, as reported by the team. Edit or remove entries
- * here — the homepage band renders whatever this list contains.
+ * here - the homepage band renders whatever this list contains.
  */
 export const proofPoints = [
   { value: "₹30L+", label: "Monthly ad spend managed" },
-  { value: "12", label: "Ad accounts — 4 Google, 8 Meta" },
+  { value: "12", label: "Ad accounts - 4 Google, 8 Meta" },
   { value: "4×", label: "ROAS on D2C campaigns" },
   { value: "10×", label: "ROAS on selected FMCG campaigns" },
   { value: "100K+", label: "Audience grown, from 33K" },
@@ -19,7 +19,7 @@ export const industries = [
   { name: "Consumer Brands", slug: "consumer-brand-audience" },
 ] as const;
 
-/** How Seiz Adlers works — brand statements, not client quotes. */
+/** How Seiz Adlers works - brand statements, not client quotes. */
 export const approachPrinciples = [
   {
     title: "Brand & Digital Experience",
@@ -38,7 +38,7 @@ export const approachPrinciples = [
 export const servicePillars = [
   {
     title: "Creative & Marketing",
-    description: "Identity, content and campaigns that make a brand recognisable — and remembered.",
+    description: "Identity, content and campaigns that make a brand recognisable - and remembered.",
     services: ["brand-identity", "content-creation", "performance-marketing"],
   },
   {
@@ -57,7 +57,7 @@ export const additionalServices = [
   { title: "Website Performance & Technical Optimization", body: "Responsive behaviour, page speed, image optimization, accessibility and technical quality checks." },
   { title: "Marketing Attribution & Funnel Analysis", body: "Campaign sources, landing-page actions, lead stages and conversions measured together." },
   { title: "CRM & Third-party Integrations", body: "Forms, messaging services, CRM tools and business platforms connected to cut manual data handling." },
-  { title: "AI-assisted Business Workflows", body: "Scoped uses like reporting assistance and content workflow support — with human review." },
+  { title: "AI-assisted Business Workflows", body: "Scoped uses like reporting assistance and content workflow support - with human review." },
   { title: "Ongoing Website Maintenance", body: "Updates, backups, monitoring, bug fixes and dependency maintenance." },
   { title: "E-commerce Optimization", body: "Product pages, checkout friction, catalogue structure, analytics and experimentation." },
   { title: "Executive Dashboards & Reporting", body: "Key business and campaign indicators organised into practical reporting views." },

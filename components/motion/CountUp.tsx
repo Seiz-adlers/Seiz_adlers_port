@@ -28,7 +28,7 @@ export function CountUp({
   suffixClassName,
 }: {
   value: string;
-  /** ms to wait after entering view — lets a row of figures stagger */
+  /** ms to wait after entering view - lets a row of figures stagger */
   delay?: number;
   suffixClassName?: string;
 }) {

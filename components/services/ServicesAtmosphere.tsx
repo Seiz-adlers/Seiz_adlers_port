@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 
 /**
- * Full-bleed moving backdrop for the Services page — the "whole page under
+ * Full-bleed moving backdrop for the Services page - the "whole page under
  * something alive" moment in the light/dark alternation.
  *
  * It's a generated field, not stock footage: two slow blue light blooms
@@ -13,7 +13,7 @@ import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
  * focus, and frozen under prefers-reduced-motion.
  *
  * To swap in a real background film later, drop it in as a <video> here
- * (muted, loop, playsInline, object-cover, ~0.15 opacity) — the layering
+ * (muted, loop, playsInline, object-cover, ~0.15 opacity) - the layering
  * (fixed z-0, page content at z-10) already accounts for it.
  */
 

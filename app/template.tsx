@@ -7,7 +7,7 @@ import { useLenis } from "lenis/react";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 /**
- * Route transition — a film dissolve.
+ * Route transition - a film dissolve.
  *
  * `template.tsx` re-mounts on every navigation and the App Router only mounts
  * it once the next route is ready. A soft dark veil (never fully opaque)
@@ -19,7 +19,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
  * siblings so React can never reuse one element for the other.
  *
  * First load is excluded (module flag), so this never renders during
- * hydration — which is also why reading the reduced-motion preference
+ * hydration - which is also why reading the reduced-motion preference
  * directly is safe here.
  */
 
@@ -53,7 +53,7 @@ export default function Template({ children }: { children: ReactNode }) {
           animate={{ opacity: 0 }}
           transition={{ duration: 0.45, ease: EASE }}
         >
-          {/* cinematic frame — a soft vignette + a low bloom of brand light */}
+          {/* cinematic frame - a soft vignette + a low bloom of brand light */}
           <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_45%,transparent_55%,rgba(0,0,0,0.55))]" />
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[radial-gradient(75%_130%_at_50%_100%,rgba(0,140,255,0.16),transparent_72%)]" />
         </motion.div>

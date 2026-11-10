@@ -16,7 +16,7 @@ const schema = z.object({
   phone: z.string().optional(),
   services: z.array(z.string()).optional(),
   budget: z.string().optional(),
-  projectDetails: z.string().trim().min(10, "Tell us a little more — at least 10 characters."),
+  projectDetails: z.string().trim().min(10, "Tell us a little more - at least 10 characters."),
   website: z.string().optional(),
 });
 
@@ -162,7 +162,7 @@ export function ContactForm() {
 
       <fieldset className="mt-8">
         <legend className="text-[12px] font-medium uppercase tracking-[0.12em] text-ink-secondary">
-          Budget <span className="normal-case tracking-normal">(optional — a starting point, not a quote)</span>
+          Budget <span className="normal-case tracking-normal">(optional - a starting point, not a quote)</span>
         </legend>
         <div className="mt-4 flex flex-wrap gap-2">
           {budgetRanges.map((range) => (
@@ -202,7 +202,7 @@ export function ContactForm() {
 
       {status === "error" && (
         <p role="alert" className="mt-6 text-sm text-red-400">
-          Something went wrong — your message wasn&rsquo;t sent. Please try again, or email us directly.
+          Something went wrong - your message wasn&rsquo;t sent. Please try again, or email us directly.
         </p>
       )}
 

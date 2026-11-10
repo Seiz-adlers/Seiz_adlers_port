@@ -10,7 +10,7 @@ export type AnalyticsEvent =
 type EventPayload = Record<string, string | number | boolean | undefined>;
 
 /**
- * Provider-agnostic analytics hook. No provider is wired up yet — swap the
+ * Provider-agnostic analytics hook. No provider is wired up yet - swap the
  * body of this function for a real provider (GA4, Plausible, PostHog, etc.)
  * without touching any call site. Never pass personal data beyond what's
  * needed to understand the event.

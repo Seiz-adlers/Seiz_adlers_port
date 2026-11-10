@@ -4,7 +4,7 @@ import type { ProjectMetric, ProjectVisualSpec } from "@/data/projects";
 
 /**
  * Coded project covers. Sized in container units (cqw) so each composition
- * scales as one piece at any card width — no screenshots to go stale, and
+ * scales as one piece at any card width - no screenshots to go stale, and
  * nothing that repeats the homepage hero.
  */
 
@@ -54,7 +54,7 @@ export function BrandSystem({ className }: { className?: string }) {
         </span>
       </div>
 
-      {/* stationery: business cards laid at an angle on paper — the brand,
+      {/* stationery: business cards laid at an angle on paper - the brand,
           not any one person's details */}
       <div className="relative col-span-6 row-span-3 overflow-hidden bg-[#d9dde3]">
         <div className="noise absolute inset-0 opacity-[0.25] mix-blend-multiply" />
@@ -196,8 +196,8 @@ function Motif({ motif, line, faint }: { motif: ProjectVisualSpec["motif"]; line
 }
 
 /**
- * Cover art for campaign and solution entries: a tone, a motif, and — when
- * the project has one — its headline metric set large.
+ * Cover art for campaign and solution entries: a tone, a motif, and - when
+ * the project has one - its headline metric set large.
  */
 export function CaseVisual({
   spec,

@@ -40,7 +40,7 @@ export function NotAnotherAgency() {
             <span className="text-ink-secondary">A growth partner.</span>
           </h2>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-ink-secondary">
-            Strategy, creative, technology and growth — brought together under one roof.
+            Strategy, creative, technology and growth - brought together under one roof.
           </p>
 
           <ul className="mt-12 border-t border-hair">

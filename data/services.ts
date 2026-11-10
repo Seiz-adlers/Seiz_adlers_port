@@ -19,9 +19,9 @@ export const services: Service[] = [
     title: "Brand Identity",
     tagline: "Stand out. Be remembered.",
     description:
-      "We build the strategic and visual foundation that makes a business recognizable, credible and memorable — before a single pixel of a website exists.",
+      "We build the strategic and visual foundation that makes a business recognizable, credible and memorable - before a single pixel of a website exists.",
     problem:
-      "Most businesses look like everyone else in their category — same colors, same tone, same forgettable presentation.",
+      "Most businesses look like everyone else in their category - same colors, same tone, same forgettable presentation.",
     approach:
       "We start with strategy and positioning, then build a visual and verbal system distinct enough to be remembered on sight.",
     capabilities: [
@@ -39,7 +39,7 @@ export const services: Service[] = [
       { step: "04", title: "Deliver", description: "We hand over a guideline that keeps the brand consistent as it grows." },
     ],
     faq: [
-      { question: "Do you design logos only?", answer: "No — a logo is one output of a wider identity system covering typography, color, tone of voice and application guidelines." },
+      { question: "Do you design logos only?", answer: "No - a logo is one output of a wider identity system covering typography, color, tone of voice and application guidelines." },
       { question: "How involved will we be?", answer: "Strategy and direction checkpoints are collaborative; you review and approve at each defined stage." },
     ],
     featured: true,
@@ -50,7 +50,7 @@ export const services: Service[] = [
     title: "Website Development",
     tagline: "Build. Optimize. Scale.",
     description:
-      "We engineer fast, accessible, production-grade websites and web products built on modern frameworks — designed to perform, not just to look good.",
+      "We engineer fast, accessible, production-grade websites and web products built on modern frameworks - designed to perform, not just to look good.",
     problem:
       "A beautiful website that loads slowly, breaks on mobile or can't be updated is a liability, not an asset.",
     approach:
@@ -81,7 +81,7 @@ export const services: Service[] = [
     title: "SEO",
     tagline: "Rank higher. Grow faster.",
     description:
-      "We build technical and content foundations that help the right audience find the business through search — measured, not guessed.",
+      "We build technical and content foundations that help the right audience find the business through search - measured, not guessed.",
     problem:
       "Traffic that doesn't convert, or an audience that can't find the business at all, both point to the same root cause: weak search foundations.",
     approach:
@@ -102,7 +102,7 @@ export const services: Service[] = [
     ],
     faq: [
       { question: "How fast will we see results?", answer: "SEO compounds over time; timelines depend on the site's current state and competitive landscape." },
-      { question: "Do you guarantee rankings?", answer: "No ethical SEO practice can guarantee specific rankings — we focus on sustainable, measurable growth." },
+      { question: "Do you guarantee rankings?", answer: "No ethical SEO practice can guarantee specific rankings - we focus on sustainable, measurable growth." },
     ],
     featured: true,
   },
@@ -112,9 +112,9 @@ export const services: Service[] = [
     title: "Performance Marketing",
     tagline: "Drive. Convert. Grow.",
     description:
-      "We plan and run paid acquisition built around measurable outcomes — every rupee spent tied back to a business result.",
+      "We plan and run paid acquisition built around measurable outcomes - every rupee spent tied back to a business result.",
     problem:
-      "Ad spend without a clear link to business outcomes is just an expense — not growth.",
+      "Ad spend without a clear link to business outcomes is just an expense - not growth.",
     approach:
       "We build every campaign around a defined outcome, then optimize continuously against that number, not vanity metrics.",
     capabilities: [
@@ -132,7 +132,7 @@ export const services: Service[] = [
       { step: "04", title: "Report", description: "We report clearly against agreed business outcomes." },
     ],
     faq: [
-      { question: "What's the minimum budget?", answer: "Budgets are scoped per business and goal — discussed directly during the project conversation." },
+      { question: "What's the minimum budget?", answer: "Budgets are scoped per business and goal - discussed directly during the project conversation." },
       { question: "Which platforms do you run?", answer: "Platform selection depends on where the target audience actually spends attention." },
     ],
     featured: true,
@@ -147,7 +147,7 @@ export const services: Service[] = [
     problem:
       "Inconsistent content across channels makes even a strong brand feel scattered and forgettable.",
     approach:
-      "We build a content system tied to the brand strategy, so every piece — big or small — reinforces the same identity.",
+      "We build a content system tied to the brand strategy, so every piece - big or small - reinforces the same identity.",
     capabilities: [
       "Content Strategy",
       "Copywriting",
@@ -175,7 +175,7 @@ export const services: Service[] = [
     description:
       "We connect the systems that turn manual marketing effort into repeatable, scalable growth infrastructure.",
     problem:
-      "Manual, one-off marketing effort doesn't scale with the business — it just adds more work per lead.",
+      "Manual, one-off marketing effort doesn't scale with the business - it just adds more work per lead.",
     approach:
       "We connect the tools already in use into workflows that run without constant manual input.",
     capabilities: [

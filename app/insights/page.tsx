@@ -23,7 +23,7 @@ export default function InsightsPage() {
               Insights
             </h1>
             <p className="mt-6 max-w-md text-lg text-ink-secondary">
-              No articles are published yet — drafts are labelled clearly below.
+              No articles are published yet - drafts are labelled clearly below.
             </p>
           </Reveal>
         </div>

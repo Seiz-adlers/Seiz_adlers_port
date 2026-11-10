@@ -7,13 +7,13 @@ import { useReducedMotionSafe } from "@/components/motion/useReducedMotionSafe";
 interface ChapterProps {
   children: ReactNode;
   theme: "dark" | "light";
-  /** The hero opts out of the recede transform — it stays exactly as designed. */
+  /** The hero opts out of the recede transform - it stays exactly as designed. */
   plain?: boolean;
 }
 
 /**
- * One homepage chapter. Carries its own light/dark theme, and — as you scroll
- * past it — eases back by dimming slightly. No scale/tilt/offset: those left
+ * One homepage chapter. Carries its own light/dark theme, and - as you scroll
+ * past it - eases back by dimming slightly. No scale/tilt/offset: those left
  * slanted edges and gaps between chapters. Entrance choreography is
  * left to each section's own Reveal components. Free-scroll, scroll-linked
  * (Lenis-smoothed), no hijacking.

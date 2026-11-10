@@ -12,7 +12,7 @@ interface MagneticProps {
 /**
  * Subtle magnetic hover: the wrapped element eases a few pixels toward the
  * cursor. Motion values are driven directly (no React state) so pointer moves
- * never trigger a re-render — the pull stays smooth even on heavier pages.
+ * never trigger a re-render - the pull stays smooth even on heavier pages.
  * Disabled for touch and prefers-reduced-motion so it never fights natural
  * mobile scrolling or motion-sensitive users.
  */

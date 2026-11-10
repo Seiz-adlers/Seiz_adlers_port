@@ -5,7 +5,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/motion/Reveal";
 
 /**
- * About Seiz Adlers — who we are, shown through disciplines rather than
+ * About Seiz Adlers - who we are, shown through disciplines rather than
  * individual people (the team prefers not to be pictured or listed).
  * Composition: intro row → photographic band with a glass orb breaking its
  * top edge → disciplines as icon medallions → needs.
@@ -38,7 +38,7 @@ const disciplines: Array<{ title: string; body: string; tags: string[]; icon: Re
   },
   {
     title: "Creatives",
-    body: "Identity, content and campaigns distinct enough to be recognised — and remembered.",
+    body: "Identity, content and campaigns distinct enough to be recognised - and remembered.",
     tags: ["Brand identity", "Content", "Art direction"],
     tint: "from-[#7FD1FF]/30 to-[#008CFF]/10",
     icon: (
@@ -106,7 +106,7 @@ export function TeamSection({ index = "07" }: { index?: string }) {
             </p>
             <p>
               We&rsquo;re a compact team of strategists, creatives, marketers and technology enthusiasts who look
-              beyond the obvious — finding the opportunities others overlook and bringing the right ideas, digital
+              beyond the obvious - finding the opportunities others overlook and bringing the right ideas, digital
               strategy and technology together to move your business forward.
             </p>
           </Reveal>
@@ -115,7 +115,7 @@ export function TeamSection({ index = "07" }: { index?: string }) {
         {/* Photographic band with the orb breaking its top edge */}
         <Reveal delay={0.1} className="relative mt-32 md:mt-40">
           <div className="relative h-[300px] overflow-hidden rounded-[28px] border border-white/10 sm:h-[360px] md:h-[440px]">
-            {/* Photo by Sebastian Schuster — https://unsplash.com/photos/pFv5PYlDQBk (Unsplash License). */}
+            {/* Photo by Sebastian Schuster - https://unsplash.com/photos/pFv5PYlDQBk (Unsplash License). */}
             <Image
               src="/about/architecture.jpg"
               alt=""
@@ -139,7 +139,7 @@ export function TeamSection({ index = "07" }: { index?: string }) {
             </p>
           </div>
 
-          {/* Glass orb — top half sits above the band, bottom half refracts the photo */}
+          {/* Glass orb - top half sits above the band, bottom half refracts the photo */}
           <div
             aria-hidden
             className="absolute left-1/2 top-0 h-[150px] w-[150px] -translate-x-1/2 -translate-y-1/2 sm:h-[200px] sm:w-[200px] md:h-[240px] md:w-[240px]"
@@ -193,7 +193,7 @@ export function TeamSection({ index = "07" }: { index?: string }) {
         {/* Needs */}
         <Reveal delay={0.1} className="mt-24 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:items-center lg:gap-16">
           <p className="max-w-sm text-ink-secondary">
-            Solutions built around your goals — <span className="text-ink">not one-size-fits-all services.</span>
+            Solutions built around your goals - <span className="text-ink">not one-size-fits-all services.</span>
           </p>
           <ul className="grid gap-px overflow-hidden rounded-2xl border border-hair bg-[var(--hair)] sm:grid-cols-2">
             {needs.map((n) => (

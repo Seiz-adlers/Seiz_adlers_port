@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative isolate flex min-h-[78svh] items-end overflow-hidden border-b border-hair pb-14 pt-32 md:pb-20">
-        {/* Photo by Sebastian Schuster — https://unsplash.com/photos/pFv5PYlDQBk (Unsplash License). */}
+        {/* Photo by Sebastian Schuster - https://unsplash.com/photos/pFv5PYlDQBk (Unsplash License). */}
         <div aria-hidden className="absolute inset-0 -z-10">
           <Image
             src="/about/architecture.jpg"
@@ -44,7 +44,7 @@ export default function AboutPage() {
               Build something worth remembering.
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-secondary">
-              Strategy, creative, technology and growth — brought together by one team, held to one standard.
+              Strategy, creative, technology and growth - brought together by one team, held to one standard.
             </p>
           </Reveal>
         </div>

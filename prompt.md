@@ -1,4 +1,4 @@
-SEIZ ADLERS — COMPLETE PRODUCTION WEBSITE BUILD PROMPT
+SEIZ ADLERS - COMPLETE PRODUCTION WEBSITE BUILD PROMPT
 
 ROLE
 
@@ -30,7 +30,7 @@ BRANDING + DESIGN + TECHNOLOGY + STRATEGY + GROWTH + ATTENTION TO DETAIL
 
 
 ==================================================
-01 — PRIMARY OBJECTIVE
+01 - PRIMARY OBJECTIVE
 ==================================================
 
 Build a production-quality website for:
@@ -88,7 +88,7 @@ The visitor's emotional progression should be:
 
 
 ==================================================
-02 — ABSOLUTE DESIGN RULE
+02 - ABSOLUTE DESIGN RULE
 ==================================================
 
 DO NOT create:
@@ -130,7 +130,7 @@ Premium means:
 
 
 ==================================================
-03 — EXISTING ASSETS — IMPORTANT
+03 - EXISTING ASSETS - IMPORTANT
 ==================================================
 
 The project already contains the company's visual assets inside:
@@ -171,7 +171,7 @@ If there are multiple versions of a photo, choose the highest-quality and most s
 
 
 ==================================================
-04 — CRITICAL TEAM PRESENTATION PRINCIPLE
+04 - CRITICAL TEAM PRESENTATION PRINCIPLE
 ==================================================
 
 This is one of the most important requirements of the entire project.
@@ -224,7 +224,7 @@ NOT:
 
 
 ==================================================
-05 — TEAM DATA
+05 - TEAM DATA
 ==================================================
 
 The currently supplied team information contains five named people:
@@ -285,7 +285,7 @@ If information is unavailable, use:
 
 
 ==================================================
-06 — BRAND DNA
+06 - BRAND DNA
 ==================================================
 
 Use the supplied Seiz Adlers visual reference as the PRIMARY BRAND DIRECTION.
@@ -331,7 +331,7 @@ GROWTH CONSULTANCY
 
 
 ==================================================
-07 — DESIGN SYSTEM
+07 - DESIGN SYSTEM
 ==================================================
 
 Primary background:
@@ -400,7 +400,7 @@ DO NOT make every component blue.
 
 
 ==================================================
-08 — TYPOGRAPHY
+08 - TYPOGRAPHY
 ==================================================
 
 Use a premium modern sans-serif.
@@ -438,7 +438,7 @@ Mobile must scale intelligently.
 
 
 ==================================================
-09 — HANDWRITTEN ACCENT
+09 - HANDWRITTEN ACCENT
 ==================================================
 
 The handwritten visual treatment from the supplied branding may be used strategically.
@@ -455,7 +455,7 @@ DO NOT use script typography throughout the website.
 
 
 ==================================================
-10 — TECHNOLOGY STACK
+10 - TECHNOLOGY STACK
 ==================================================
 
 Preferred stack:
@@ -492,7 +492,7 @@ DO NOT overengineer the initial version.
 
 
 ==================================================
-11 — PROJECT ARCHITECTURE
+11 - PROJECT ARCHITECTURE
 ==================================================
 
 Use a scalable architecture similar to:
@@ -568,7 +568,7 @@ Keep components modular and reusable.
 
 
 ==================================================
-12 — DATA-DRIVEN CONTENT
+12 - DATA-DRIVEN CONTENT
 ==================================================
 
 Do not hardcode every piece of content into JSX.
@@ -631,7 +631,7 @@ Insights:
 
 
 ==================================================
-13 — GLOBAL NAVIGATION
+13 - GLOBAL NAVIGATION
 ==================================================
 
 Desktop navigation:
@@ -671,7 +671,7 @@ The navbar should feel integrated into the design rather than like a generic Saa
 
 
 ==================================================
-14 — MOBILE NAVIGATION
+14 - MOBILE NAVIGATION
 ==================================================
 
 Mobile navigation should be a premium fullscreen experience.
@@ -696,7 +696,7 @@ Touch targets should be approximately 44px minimum.
 
 
 ==================================================
-15 — HOMEPAGE STRUCTURE
+15 - HOMEPAGE STRUCTURE
 ==================================================
 
 Homepage narrative:
@@ -759,7 +759,7 @@ Each section should have its own visual rhythm.
 
 
 ==================================================
-16 — HERO
+16 - HERO
 ==================================================
 
 This is the most important part of the site.
@@ -798,7 +798,7 @@ The hero should occupy most of the initial viewport.
 
 
 ==================================================
-17 — HERO VISUAL
+17 - HERO VISUAL
 ==================================================
 
 Create a sophisticated visual environment.
@@ -833,7 +833,7 @@ The visual must support the brand story.
 
 
 ==================================================
-18 — PERFORMANCE-FIRST 3D
+18 - PERFORMANCE-FIRST 3D
 ==================================================
 
 3D must be:
@@ -858,7 +858,7 @@ REMOVE THE 3D.
 
 
 ==================================================
-19 — HERO INTERACTIONS
+19 - HERO INTERACTIONS
 ==================================================
 
 CTA hover:
@@ -881,7 +881,7 @@ Mobile must remain natural.
 
 
 ==================================================
-20 — NOT ANOTHER AGENCY
+20 - NOT ANOTHER AGENCY
 ==================================================
 
 Headline:
@@ -892,7 +892,7 @@ A GROWTH PARTNER.
 
 Supporting copy:
 
-"Strategy, creative, technology and growth — brought together under one roof."
+"Strategy, creative, technology and growth - brought together under one roof."
 
 Create a scroll-driven sequence:
 
@@ -912,7 +912,7 @@ Use typography and spacing rather than excessive effects.
 
 
 ==================================================
-21 — WHAT WE BUILD
+21 - WHAT WE BUILD
 ==================================================
 
 Heading:
@@ -961,7 +961,7 @@ Use an editorial composition.
 
 
 ==================================================
-22 — SERVICE INTERACTION
+22 - SERVICE INTERACTION
 ==================================================
 
 Desktop:
@@ -996,7 +996,7 @@ All interactions must remain keyboard accessible.
 
 
 ==================================================
-23 — SELECTED WORK
+23 - SELECTED WORK
 ==================================================
 
 Heading:
@@ -1046,7 +1046,7 @@ Hover:
 
 
 ==================================================
-24 — INTERNAL SEIZ ADLERS CASE STUDY
+24 - INTERNAL SEIZ ADLERS CASE STUDY
 ==================================================
 
 Create a real internal case study based on the company itself.
@@ -1079,7 +1079,7 @@ NEVER fabricate metrics.
 
 
 ==================================================
-25 — CASE STUDY ARCHITECTURE
+25 - CASE STUDY ARCHITECTURE
 ==================================================
 
 Every case study page should support:
@@ -1112,7 +1112,7 @@ If results are unavailable:
 
 
 ==================================================
-26 — THE ADLER METHOD
+26 - THE ADLER METHOD
 ==================================================
 
 Heading:
@@ -1155,7 +1155,7 @@ It should feel like moving through a system.
 
 
 ==================================================
-27 — CREATIVE + ENGINEERING
+27 - CREATIVE + ENGINEERING
 ==================================================
 
 Heading:
@@ -1188,7 +1188,7 @@ Do not turn this into a developer portfolio.
 
 
 ==================================================
-28 — TECHNOLOGY
+28 - TECHNOLOGY
 ==================================================
 
 Heading:
@@ -1219,7 +1219,7 @@ Do not claim expertise until confirmed.
 
 
 ==================================================
-29 — PERFORMANCE VISUALIZATION
+29 - PERFORMANCE VISUALIZATION
 ==================================================
 
 Create a dashboard-inspired visual inspired by the supplied branding.
@@ -1248,7 +1248,7 @@ After deployment, actual Lighthouse measurements can replace them.
 
 
 ==================================================
-30 — TEAM SECTION
+30 - TEAM SECTION
 ==================================================
 
 This section must be one of the emotional highlights of the website.
@@ -1310,7 +1310,7 @@ ONE STANDARD
 
 
 ==================================================
-31 — TEAM INTERACTION
+31 - TEAM INTERACTION
 ==================================================
 
 Desktop:
@@ -1356,7 +1356,7 @@ Do not make mobile feel like an employee directory.
 
 
 ==================================================
-32 — TEAM ORDER
+32 - TEAM ORDER
 ==================================================
 
 Do NOT visually communicate:
@@ -1383,7 +1383,7 @@ NOT:
 
 
 ==================================================
-33 — FOUNDER/TEAM PHOTOGRAPHY
+33 - FOUNDER/TEAM PHOTOGRAPHY
 ==================================================
 
 Use the actual photographs from /public.
@@ -1412,7 +1412,7 @@ The overall treatment should still feel like one team.
 
 
 ==================================================
-34 — TEAM INTERACTION MUST NOT CREATE RANKING
+34 - TEAM INTERACTION MUST NOT CREATE RANKING
 ==================================================
 
 Avoid:
@@ -1439,7 +1439,7 @@ The interaction should communicate:
 
 
 ==================================================
-35 — FOUNDERS STORY
+35 - FOUNDERS STORY
 ==================================================
 
 Heading:
@@ -1471,7 +1471,7 @@ Never fabricate the origin story.
 
 
 ==================================================
-36 — WHY SEIZ ADLERS
+36 - WHY SEIZ ADLERS
 ==================================================
 
 Heading:
@@ -1480,29 +1480,29 @@ WHY SEIZ ADLERS?
 
 Five principles:
 
-01 — ONE TEAM
+01 - ONE TEAM
 
 "No unnecessary handoffs."
 
-02 — STRATEGY FIRST
+02 - STRATEGY FIRST
 
 "We solve the problem before designing the solution."
 
-03 — DESIGN + ENGINEERING
+03 - DESIGN + ENGINEERING
 
 "Beautiful experiences that actually work."
 
-04 — BUILT FOR GROWTH
+04 - BUILT FOR GROWTH
 
 "The website is a business tool, not just a brochure."
 
-05 — LONG-TERM THINKING
+05 - LONG-TERM THINKING
 
 "We build relationships, not one-off deliverables."
 
 
 ==================================================
-37 — MANIFESTO
+37 - MANIFESTO
 ==================================================
 
 Create a cinematic full-screen manifesto.
@@ -1535,7 +1535,7 @@ The section should feel emotional, sophisticated and memorable.
 
 
 ==================================================
-38 — TESTIMONIALS
+38 - TESTIMONIALS
 ==================================================
 
 If real testimonials do not exist:
@@ -1560,7 +1560,7 @@ project
 
 
 ==================================================
-39 — INSIGHTS
+39 - INSIGHTS
 ==================================================
 
 Categories:
@@ -1594,7 +1594,7 @@ Premium editorial publication.
 
 
 ==================================================
-40 — CONTACT
+40 - CONTACT
 ==================================================
 
 Major final CTA:
@@ -1616,7 +1616,7 @@ Not like filling out a generic corporate form.
 
 
 ==================================================
-41 — MULTI-STEP CONTACT FORM
+41 - MULTI-STEP CONTACT FORM
 ==================================================
 
 STEP 01:
@@ -1681,7 +1681,7 @@ Do not promise response times unless confirmed.
 
 
 ==================================================
-42 — FOOTER
+42 - FOOTER
 ==================================================
 
 Large footer.
@@ -1716,7 +1716,7 @@ Terms
 
 
 ==================================================
-43 — CONTACT INFORMATION
+43 - CONTACT INFORMATION
 ==================================================
 
 Use centralized configuration.
@@ -1742,7 +1742,7 @@ Only use verified/supplied information.
 
 
 ==================================================
-44 — MOBILE EXPERIENCE
+44 - MOBILE EXPERIENCE
 ==================================================
 
 Mobile is NOT a compressed desktop layout.
@@ -1776,7 +1776,7 @@ Requirements:
 
 
 ==================================================
-45 — RESPONSIVE DESIGN
+45 - RESPONSIVE DESIGN
 ==================================================
 
 Support:
@@ -1805,7 +1805,7 @@ Grid:
 
 
 ==================================================
-46 — MOTION SYSTEM
+46 - MOTION SYSTEM
 ==================================================
 
 Use motion intentionally.
@@ -1844,7 +1844,7 @@ Contrast creates sophistication.
 
 
 ==================================================
-47 — ACCESSIBILITY
+47 - ACCESSIBILITY
 ==================================================
 
 Must include:
@@ -1875,7 +1875,7 @@ Never sacrifice accessibility for visual effects.
 
 
 ==================================================
-48 — PERFORMANCE
+48 - PERFORMANCE
 ==================================================
 
 Performance is a core design requirement.
@@ -1911,7 +1911,7 @@ Avoid unnecessary dependencies.
 
 
 ==================================================
-49 — IMAGE SYSTEM
+49 - IMAGE SYSTEM
 ==================================================
 
 For every real image:
@@ -1935,7 +1935,7 @@ Never use random stock imagery merely to fill empty space.
 
 
 ==================================================
-50 — SEO
+50 - SEO
 ==================================================
 
 Every page needs:
@@ -1964,7 +1964,7 @@ Never create fake review/rating schema.
 
 
 ==================================================
-51 — ANALYTICS
+51 - ANALYTICS
 ==================================================
 
 Create configurable analytics hooks.
@@ -1985,7 +1985,7 @@ Analytics provider should be replaceable.
 
 
 ==================================================
-52 — CUSTOM CURSOR
+52 - CUSTOM CURSOR
 ==================================================
 
 Desktop only.
@@ -2016,7 +2016,7 @@ Never interfere with normal browser usability.
 
 
 ==================================================
-53 — PAGE TRANSITIONS
+53 - PAGE TRANSITIONS
 ==================================================
 
 Use subtle transitions.
@@ -2035,7 +2035,7 @@ Never delay navigation unnecessarily.
 
 
 ==================================================
-54 — LOADING EXPERIENCE
+54 - LOADING EXPERIENCE
 ==================================================
 
 Minimal.
@@ -2058,7 +2058,7 @@ If content is ready, display it immediately.
 
 
 ==================================================
-55 — 404
+55 - 404
 ==================================================
 
 Create an artistic 404.
@@ -2073,7 +2073,7 @@ Optional subtle geometric animation.
 
 
 ==================================================
-56 — ERROR STATES
+56 - ERROR STATES
 ==================================================
 
 Support polished states for:
@@ -2093,7 +2093,7 @@ RETRY →
 
 
 ==================================================
-57 — CONTENT AUTHENTICITY
+57 - CONTENT AUTHENTICITY
 ==================================================
 
 This rule overrides everything else.
@@ -2126,7 +2126,7 @@ or another elegant editable placeholder.
 
 
 ==================================================
-58 — VISUAL STORYTELLING
+58 - VISUAL STORYTELLING
 ==================================================
 
 The website should feel like entering the Seiz Adlers world.
@@ -2173,7 +2173,7 @@ Final emotional message:
 
 
 ==================================================
-59 — MICROCOPY
+59 - MICROCOPY
 ==================================================
 
 Use concise language.
@@ -2212,7 +2212,7 @@ We grow.
 
 
 ==================================================
-60 — DESIGN DETAILS
+60 - DESIGN DETAILS
 ==================================================
 
 Use:
@@ -2241,7 +2241,7 @@ This should create a sophisticated editorial system.
 
 
 ==================================================
-61 — ROUTES
+61 - ROUTES
 ==================================================
 
 Implement:
@@ -2278,7 +2278,7 @@ Do not build future routes unless required.
 
 
 ==================================================
-62 — SERVICE PAGES
+62 - SERVICE PAGES
 ==================================================
 
 Each service page should feel like its own editorial experience.
@@ -2311,7 +2311,7 @@ Reuse components but vary composition.
 
 
 ==================================================
-63 — ABOUT PAGE
+63 - ABOUT PAGE
 ==================================================
 
 About page should include:
@@ -2330,7 +2330,7 @@ The team should be the emotional center.
 
 
 ==================================================
-64 — WORK PAGE
+64 - WORK PAGE
 ==================================================
 
 Create a premium editorial portfolio index.
@@ -2353,7 +2353,7 @@ Only add filtering if the number of projects justifies it.
 
 
 ==================================================
-65 — INSIGHTS PAGE
+65 - INSIGHTS PAGE
 ==================================================
 
 Treat Insights like a premium editorial publication.
@@ -2372,7 +2372,7 @@ Clearly label placeholders as drafts.
 
 
 ==================================================
-66 — CONVERSION STRATEGY
+66 - CONVERSION STRATEGY
 ==================================================
 
 Primary conversion:
@@ -2415,7 +2415,7 @@ CONTACT
 
 
 ==================================================
-67 — TEAM CONVERSION PSYCHOLOGY
+67 - TEAM CONVERSION PSYCHOLOGY
 ==================================================
 
 The team section should answer:
@@ -2452,7 +2452,7 @@ Do not create a rigid hierarchy.
 
 
 ==================================================
-68 — ORGANIZATIONAL HIERARCHY VS TEAM IDENTITY
+68 - ORGANIZATIONAL HIERARCHY VS TEAM IDENTITY
 ==================================================
 
 This distinction is extremely important.
@@ -2485,7 +2485,7 @@ Do not directly translate an organizational chart into the About/team visual exp
 
 
 ==================================================
-69 — BACKGROUND SYSTEM
+69 - BACKGROUND SYSTEM
 ==================================================
 
 Use subtle:
@@ -2508,7 +2508,7 @@ The background should appear almost black at first glance.
 
 
 ==================================================
-70 — 3D PHILOSOPHY
+70 - 3D PHILOSOPHY
 ==================================================
 
 If 3D is used:
@@ -2538,14 +2538,14 @@ DO NOT recreate the exact logo in 3D.
 
 
 ==================================================
-71 — IMPLEMENTATION ORDER
+71 - IMPLEMENTATION ORDER
 ==================================================
 
 DO NOT attempt to blindly generate the entire application in one pass.
 
 Follow this sequence.
 
-PHASE 01 — AUDIT
+PHASE 01 - AUDIT
 
 Inspect:
 
@@ -2560,7 +2560,7 @@ Inspect:
 
 Do not overwrite useful existing work.
 
-PHASE 02 — FOUNDATION
+PHASE 02 - FOUNDATION
 
 Create:
 
@@ -2574,7 +2574,7 @@ Create:
 - Footer
 - Basic motion utilities
 
-PHASE 03 — HOMEPAGE STRUCTURE
+PHASE 03 - HOMEPAGE STRUCTURE
 
 Build:
 
@@ -2599,7 +2599,7 @@ LAYOUT + TYPOGRAPHY + HIERARCHY
 
 Do NOT add complex animation yet.
 
-PHASE 04 — RESPONSIVE
+PHASE 04 - RESPONSIVE
 
 Test:
 
@@ -2614,7 +2614,7 @@ Test:
 
 Fix layout before adding effects.
 
-PHASE 05 — VISUAL POLISH
+PHASE 05 - VISUAL POLISH
 
 Add:
 
@@ -2625,11 +2625,11 @@ Add:
 - Micro-interactions
 - Section transitions
 
-PHASE 06 — MOTION
+PHASE 06 - MOTION
 
 Add motion only after the layout is strong.
 
-PHASE 07 — 3D
+PHASE 07 - 3D
 
 Only now evaluate whether 3D improves the experience.
 
@@ -2641,7 +2641,7 @@ If no:
 
 Use a high-quality CSS/static visual alternative.
 
-PHASE 08 — INNER PAGES
+PHASE 08 - INNER PAGES
 
 Build:
 
@@ -2655,7 +2655,7 @@ Build:
 - Contact
 - 404
 
-PHASE 09 — QUALITY ASSURANCE
+PHASE 09 - QUALITY ASSURANCE
 
 Perform:
 
@@ -2671,7 +2671,7 @@ Perform:
 
 
 ==================================================
-72 — VISUAL QA LOOP
+72 - VISUAL QA LOOP
 ==================================================
 
 After every major section:
@@ -2732,7 +2732,7 @@ Do not simply add effects.
 
 
 ==================================================
-73 — PERFORMANCE QA
+73 - PERFORMANCE QA
 ==================================================
 
 Run a production build.
@@ -2759,7 +2759,7 @@ Do not accept a visually beautiful but slow website.
 
 
 ==================================================
-74 — ACCESSIBILITY QA
+74 - ACCESSIBILITY QA
 ==================================================
 
 Verify:
@@ -2780,7 +2780,7 @@ No important information should require hover.
 
 
 ==================================================
-75 — SEO QA
+75 - SEO QA
 ==================================================
 
 Verify every route has:
@@ -2802,7 +2802,7 @@ Do not generate fake review schema.
 
 
 ==================================================
-76 — ERROR HANDLING
+76 - ERROR HANDLING
 ==================================================
 
 Implement appropriate:
@@ -2815,7 +2815,7 @@ The experience should remain branded even when something fails.
 
 
 ==================================================
-77 — CODE QUALITY
+77 - CODE QUALITY
 ==================================================
 
 Code must be:
@@ -2841,7 +2841,7 @@ Avoid:
 
 
 ==================================================
-78 — DO NOT OVERENGINEER
+78 - DO NOT OVERENGINEER
 ==================================================
 
 Do not introduce technology merely to demonstrate technical ability.
@@ -2862,7 +2862,7 @@ Engineering maturity should be demonstrated through restraint.
 
 
 ==================================================
-79 — FINAL QUALITY BAR
+79 - FINAL QUALITY BAR
 ==================================================
 
 Before declaring the project complete, ask:
@@ -2907,7 +2907,7 @@ CONTINUE REFINING.
 
 
 ==================================================
-80 — FINAL NON-NEGOTIABLES
+80 - FINAL NON-NEGOTIABLES
 ==================================================
 
 NEVER:
@@ -2953,7 +2953,7 @@ ALWAYS:
 
 
 ==================================================
-81 — CORE CREATIVE DIRECTION
+81 - CORE CREATIVE DIRECTION
 ==================================================
 
 Everything should ultimately communicate:
@@ -2992,7 +2992,7 @@ The visitor should finish thinking:
 
 
 ==================================================
-82 — MOST IMPORTANT TEAM PRINCIPLE
+82 - MOST IMPORTANT TEAM PRINCIPLE
 ==================================================
 
 The team section must communicate:
@@ -3031,7 +3031,7 @@ NOT:
 
 
 ==================================================
-83 — FINAL IMPLEMENTATION INSTRUCTION
+83 - FINAL IMPLEMENTATION INSTRUCTION
 ==================================================
 
 Do not treat this prompt as a checklist where every requested feature must be visually added.
@@ -3100,7 +3100,7 @@ MEMORABLE.
 
 
 ==================================================
-84 — FINAL BRAND STATEMENT
+84 - FINAL BRAND STATEMENT
 ==================================================
 
 BUILD THE BRAND PEOPLE REMEMBER.

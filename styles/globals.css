@@ -7,8 +7,8 @@
  * -------
  * Surface / text / line colours are CSS variables as raw "R G B" channels so
  * Tailwind's `/opacity` modifiers keep working (e.g. `bg-bg/80`).
- *   :root / [data-theme="dark"]  — the near-black system (homepage hero + dark chapters + dark routes)
- *   [data-theme="light"]         — the warm-paper system (light chapters + Services / Insights)
+ *   :root / [data-theme="dark"]  - the near-black system (homepage hero + dark chapters + dark routes)
+ *   [data-theme="light"]         - the warm-paper system (light chapters + Services / Insights)
  * `[data-theme="dark"]` re-asserts dark so nested dark islands (the footer) work on a light page.
  */
 
@@ -26,7 +26,7 @@
   --text-1: 154 163 174;
   --text-2: 98 107 118;
 
-  /* blue used as *text* on the page background — bright on dark */
+  /* blue used as *text* on the page background - bright on dark */
   --accent: 0 168 255;
 
   --hair: rgba(255, 255, 255, 0.1);
@@ -43,8 +43,8 @@
 }
 
 [data-theme="light"] {
-  /* Warm paper, but built with real depth — layered surfaces, warm shadows,
-     a soft top-light on the page — so it reads considered, not flat beige. */
+  /* Warm paper, but built with real depth - layered surfaces, warm shadows,
+     a soft top-light on the page - so it reads considered, not flat beige. */
   --surface-0: 244 240 232; /* page */
   --surface-1: 236 230 219; /* deeper band */
   --surface-2: 252 250 245; /* raised card */
@@ -54,7 +54,7 @@
   --text-1: 82 74 63; /* warm grey */
   --text-2: 128 118 104; /* muted */
 
-  --accent: 11 82 156; /* deep considered blue — AA on paper */
+  --accent: 11 82 156; /* deep considered blue - AA on paper */
 
   --hair: rgba(38, 30, 20, 0.16);
   --hair-strong: rgba(38, 30, 20, 0.28);
@@ -72,7 +72,7 @@
 
 html {
   background: rgb(var(--surface-0));
-  /* No global `scroll-behavior: smooth` — it hijacks keyboard/anchor scrolling
+  /* No global `scroll-behavior: smooth` - it hijacks keyboard/anchor scrolling
      into a slow browser animation. Lenis (JS) does the smooth wheel easing and
      leaves keyboard scrolling instant. */
   -webkit-text-size-adjust: 100%;
@@ -80,7 +80,7 @@ html {
 
 body {
   background-color: rgb(var(--surface-0));
-  /* Soft, theme-aware page wash — barely-there light on the surface. Fixed so
+  /* Soft, theme-aware page wash - barely-there light on the surface. Fixed so
      it stays put while the page scrolls. Painted as part of the body
      background, so it never sits over content. */
   background-image: var(--body-wash);
@@ -157,7 +157,7 @@ html.lenis body {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
-/* Raw film-grain tile — set its strength with an opacity utility. */
+/* Raw film-grain tile - set its strength with an opacity utility. */
 .noise {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
@@ -186,7 +186,7 @@ html.lenis body {
 }
 
 /*
- * Hero entrance — plain CSS so it plays on first paint without waiting for
+ * Hero entrance - plain CSS so it plays on first paint without waiting for
  * hydration (nothing is held at opacity 0 until JS arrives). The global
  * reduced-motion rule above collapses every one of these to its end state.
  */
@@ -249,7 +249,7 @@ html.lenis body {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  /* Staggers are inline animation-delays — drop them too, or content would
+  /* Staggers are inline animation-delays - drop them too, or content would
      sit in its hidden "from" state until the delay elapsed. */
   .hero-rise,
   .hero-fade,

@@ -3,7 +3,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { CountUp } from "@/components/motion/CountUp";
 
 /**
- * Headline results band — large figures, hairline-divided, on brand blue.
+ * Headline results band - large figures, hairline-divided, on brand blue.
  * Each figure counts up from zero the first time the band scrolls into view,
  * staggered left to right; units (₹, L+, ×, K+) sit lighter so the number leads.
  */

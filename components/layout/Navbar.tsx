@@ -14,7 +14,7 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   // Unscrolled on the homepage the bar floats over the hero's photo and blue
-  // panel, where the grey secondary ink loses contrast — use white instead.
+  // panel, where the grey secondary ink loses contrast - use white instead.
   const overHero = pathname === "/" && !scrolled;
 
   function isActive(href: string) {

@@ -11,7 +11,7 @@ export const projectTypes = [
 ] as const;
 
 /**
- * Ranges are placeholders until real pricing is confirmed — edit freely,
+ * Ranges are placeholders until real pricing is confirmed - edit freely,
  * never treat as final pricing commitments.
  */
 export const budgetRanges = [

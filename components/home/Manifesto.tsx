@@ -18,9 +18,9 @@ export function Manifesto() {
       data-theme="dark"
       className="relative isolate overflow-hidden border-t border-hair bg-bg py-24 md:py-32"
     >
-      {/* Backdrop — lit from below-left and top-right so the glass has something to refract */}
+      {/* Backdrop - lit from below-left and top-right so the glass has something to refract */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        {/* Photographic base — scaled from the top-left so the source's bottom-right corner mark is cropped out */}
+        {/* Photographic base - scaled from the top-left so the source's bottom-right corner mark is cropped out */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/we-belives.jpg"
@@ -38,7 +38,7 @@ export function Manifesto() {
         <div className="absolute inset-0 bg-blue-deep/10 mix-blend-color" />
         <div className="absolute -left-[10%] top-[35%] h-[520px] w-[520px] rounded-full bg-blue/15 blur-[140px]" />
         <div className="absolute -right-[8%] -top-[10%] h-[420px] w-[420px] rounded-full bg-blue-deep/20 blur-[120px]" />
-        {/* Eagle-wing chevrons — thin light lines sweeping behind the panel */}
+        {/* Eagle-wing chevrons - thin light lines sweeping behind the panel */}
         <svg
           className="absolute right-[4%] top-1/2 hidden h-[80%] -translate-y-1/2 opacity-60 lg:block"
           viewBox="0 0 400 600"
@@ -65,7 +65,7 @@ export function Manifesto() {
           <div aria-hidden className="pointer-events-none absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
 
           <div className="relative grid gap-12 p-7 sm:p-10 md:p-14 lg:grid-cols-12 lg:gap-10 lg:p-20">
-            {/* Left — label + framing */}
+            {/* Left - label + framing */}
             <div className="lg:col-span-4">
               <Reveal>
                 <p className="inline-flex items-center gap-3 rounded-full border border-blueline bg-blue/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.28em] text-blue-bright">
@@ -85,7 +85,7 @@ export function Manifesto() {
               </Reveal>
             </div>
 
-            {/* Right — the beliefs */}
+            {/* Right - the beliefs */}
             <ol className="lg:col-span-8">
               {beliefs.map(({ lead, accent }, i) => (
                 <Reveal
@@ -107,7 +107,7 @@ export function Manifesto() {
             </ol>
           </div>
 
-          {/* Closing line — full width footer of the panel */}
+          {/* Closing line - full width footer of the panel */}
           <div className="relative border-t border-white/10 bg-gradient-to-r from-blue/[0.08] via-transparent to-transparent px-7 py-10 sm:px-10 md:px-14 lg:px-20 lg:py-14">
             <Reveal delay={0.3} duration={0.9}>
               <p className="font-display text-[clamp(2.25rem,6.5vw,5.5rem)] font-semibold uppercase leading-[0.95] tracking-tight text-ink text-balance">

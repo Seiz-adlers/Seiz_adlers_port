@@ -11,11 +11,11 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata = buildMetadata({
   title: "Work",
   description:
-    "Selected work by Seiz Adlers — brand and digital experience, performance campaign results, and technology solutions.",
+    "Selected work by Seiz Adlers - brand and digital experience, performance campaign results, and technology solutions.",
   path: "/work",
 });
 
-/** Masked line reveal — the word slides up from behind its own baseline (CSS, see globals.css). */
+/** Masked line reveal - the word slides up from behind its own baseline (CSS, see globals.css). */
 function RiseLine({ children, ms }: { children: string; ms: number }) {
   return (
     <span className="block overflow-hidden pb-[0.06em]">
@@ -59,7 +59,7 @@ export default function WorkPage() {
 
           <div className="hero-fade lg:pb-3" style={{ animationDelay: "550ms" }}>
             <p className="max-w-md text-lg leading-relaxed text-ink-secondary">
-              Campaign results, technology solutions and our own brand — the work that shows how we think.
+              Campaign results, technology solutions and our own brand - the work that shows how we think.
             </p>
             <nav aria-label="Work categories" className="mt-8 grid grid-cols-3 border-t border-hair">
               {[
@@ -121,7 +121,7 @@ export default function WorkPage() {
             index="03"
             label="Technology"
             title="Technology & digital solutions."
-            intro="Websites, applications, integrations and measurement — the systems we build behind the campaigns."
+            intro="Websites, applications, integrations and measurement - the systems we build behind the campaigns."
           />
           <div className="mt-12 border-t border-hair">
             {solutionProjects.map((project) => (

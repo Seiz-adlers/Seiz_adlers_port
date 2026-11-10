@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  // Drafts are noindex — keep them out of the sitemap until published.
+  // Drafts are noindex - keep them out of the sitemap until published.
   const insightRoutes = insights.filter((i) => !i.draft).map((i) => ({
     url: `${siteConfig.url}/insights/${i.slug}`,
     lastModified: new Date(),

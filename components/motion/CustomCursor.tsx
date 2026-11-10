@@ -16,7 +16,7 @@ const LABELS: Partial<Record<Mode, string>> = { view: "View", open: "Open →" }
  *
  * It never replaces the native cursor, so it can't hurt usability, and it
  * doesn't mount at all on touch devices or under prefers-reduced-motion.
- * Position is written straight to the DOM in a rAF loop — no re-render per
+ * Position is written straight to the DOM in a rAF loop - no re-render per
  * pointer move.
  */
 export function CustomCursor() {

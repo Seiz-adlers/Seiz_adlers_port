@@ -4,7 +4,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/motion/Reveal";
 import { ThreadLines } from "@/components/hero/ThreadLines";
 
-/** Industries we've worked in — each links to its campaign case study. */
+/** Industries we've worked in - each links to its campaign case study. */
 export function Industries({ index }: { index: string }) {
   return (
     <section className="relative isolate overflow-hidden border-t border-hair py-16 md:py-24">

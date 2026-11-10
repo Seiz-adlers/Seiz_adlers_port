@@ -17,7 +17,7 @@ export function buildMetadata({
   noIndex = false,
 }: PageMetaOptions): Metadata {
   const url = `${siteConfig.url}${path}`;
-  const fullTitle = path === "/" ? title : `${title} — ${siteConfig.name}`;
+  const fullTitle = path === "/" ? title : `${title} - ${siteConfig.name}`;
 
   return {
     title: fullTitle,

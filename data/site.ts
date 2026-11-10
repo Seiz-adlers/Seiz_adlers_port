@@ -1,5 +1,5 @@
 export interface HeroPortrait {
-  /** Path under /public — must be licensed for use and free of baked-in text. */
+  /** Path under /public - must be licensed for use and free of baked-in text. */
   src: string;
   alt: string;
   /** Centre of the face, as a CSS position. */

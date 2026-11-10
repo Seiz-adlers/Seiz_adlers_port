@@ -35,7 +35,7 @@ export function BuiltToPerform({ index = "02" }: { index?: string }) {
         <Reveal delay={0.15}>
           <div className="card rounded-sm p-8">
             <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.15em] text-ink-muted">
-              Example Performance Benchmark — development target, not a live measurement
+              Example Performance Benchmark - development target, not a live measurement
             </p>
             <div className="grid grid-cols-2 gap-6">
               {benchmarks.map((b) => (

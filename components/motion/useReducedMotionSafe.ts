@@ -10,8 +10,8 @@ import { useReducedMotion } from "framer-motion";
  * media query on the client's very first render. Any component that renders
  * a different tree based on it (an extra wrapper, a hidden button) then
  * mismatches the server HTML for reduced-motion visitors and React throws a
- * hydration error. This reports `false` until after mount — matching the
- * server — then the real preference.
+ * hydration error. This reports `false` until after mount - matching the
+ * server - then the real preference.
  */
 export function useReducedMotionSafe(): boolean {
   const prefersReduced = useReducedMotion();

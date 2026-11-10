@@ -20,7 +20,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const project = getProjectBySlug(params.slug);
   if (!project) return buildMetadata({ title: "Work", description: "", path: `/work/${params.slug}`, noIndex: true });
   return buildMetadata({
-    title: `${project.title} — ${project.category}`,
+    title: `${project.title} - ${project.category}`,
     description: project.description,
     path: `/work/${project.slug}`,
     image: project.cover?.src,
@@ -92,7 +92,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               ← All Work
             </Link>
             <p className="mt-8 text-[12px] font-medium uppercase tracking-[0.2em] text-accent">
-              {project.number} — {project.category}
+              {project.number} - {project.category}
             </p>
             <h1
               className={
@@ -158,7 +158,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-      {/* Results — as reported, never estimated */}
+      {/* Results - as reported, never estimated */}
       {showResults && (
         <section className="border-t border-hair bg-bg-secondary py-14 md:py-20">
           <div className="container-fluid grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-16">
@@ -240,7 +240,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           className="group container-fluid flex flex-col gap-4 py-14 md:flex-row md:items-end md:justify-between md:py-20"
         >
           <span>
-            <span className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-muted">Next — {KIND_LABEL[next.kind]}</span>
+            <span className="text-[12px] font-medium uppercase tracking-[0.2em] text-ink-muted">Next - {KIND_LABEL[next.kind]}</span>
             <span className="mt-4 block font-display text-[clamp(1.75rem,4.5vw,3.75rem)] font-semibold uppercase leading-[1] tracking-tight text-ink transition-colors duration-300 group-hover:text-accent">
               {next.title}
             </span>

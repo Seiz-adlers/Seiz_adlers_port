@@ -6,9 +6,9 @@ export interface ProjectImage {
 }
 
 /**
- * studio    — built by Seiz Adlers as a company
- * campaign  — performance-marketing work from the team's campaign experience
- * solution  — a technology capability, presented as a solution summary
+ * studio    - built by Seiz Adlers as a company
+ * campaign  - performance-marketing work from the team's campaign experience
+ * solution  - a technology capability, presented as a solution summary
  */
 export type ProjectKind = "studio" | "campaign" | "solution";
 
@@ -17,7 +17,7 @@ export interface ProjectMetric {
   label: string;
 }
 
-/** Coded cover art — tone sets the field colour, motif the decoration. */
+/** Coded cover art - tone sets the field colour, motif the decoration. */
 export interface ProjectVisualSpec {
   tone: "dark" | "blue" | "paper";
   motif: "curve" | "rings" | "bars" | "grid" | "nodes" | "funnel";
@@ -70,19 +70,19 @@ export const projects: Project[] = [
     timeline: "[INSERT TIMELINE]",
     team: "Seiz Adlers team",
     description:
-      "Our own identity and website — the first public demonstration of how Seiz Adlers thinks, designs and builds.",
+      "Our own identity and website - the first public demonstration of how Seiz Adlers thinks, designs and builds.",
     challenge: "Create a premium identity and digital presence for a new digital company.",
     objective:
-      "Introduce a new company credibly without borrowed proof — no invented clients, metrics or testimonials, only the work itself.",
+      "Introduce a new company credibly without borrowed proof - no invented clients, metrics or testimonials, only the work itself.",
     strategy: "Combine branding, technology and growth into one cohesive digital experience.",
     creativeDirection:
       "A near-black system with electric blue used as a deliberate accent, editorial typography at poster scale, and the eagle mark's geometry echoed in fine lines rather than repeated literally.",
     uxApproach:
-      "One primary action — start a project — supported by three clear journeys through work, services and the team. Every section reads without animation, works by keyboard, and was laid out for mobile on its own terms rather than compressed from desktop.",
+      "One primary action - start a project - supported by three clear journeys through work, services and the team. Every section reads without animation, works by keyboard, and was laid out for mobile on its own terms rather than compressed from desktop.",
     designSystem:
       "Tokens for surfaces, text and accent; fluid type set with clamp(); a small set of shared primitives reused on every page; and all content held as structured data, ready to move into a CMS.",
     development:
-      "A high-performance interactive website designed to demonstrate the capabilities of the company itself — built with Next.js, TypeScript and Tailwind CSS, statically rendered, with optimised images and fonts, motion that never blocks first paint, and structured data on every route.",
+      "A high-performance interactive website designed to demonstrate the capabilities of the company itself - built with Next.js, TypeScript and Tailwind CSS, statically rendered, with optimised images and fonts, motion that never blocks first paint, and structured data on every route.",
     results: null,
     outcome: "Results published after launch",
     coverVisual: "brand-system",
@@ -234,7 +234,7 @@ export const projects: Project[] = [
     challenge:
       "Communicate services clearly, increase awareness, and attract relevant enquiries while respecting advertising and privacy requirements.",
     strategy:
-      "Campaign planning combined audience and geographic targeting, service-focused messaging, landing-page considerations, and enquiry measurement — for domestic and USA-focused campaigns where applicable.",
+      "Campaign planning combined audience and geographic targeting, service-focused messaging, landing-page considerations, and enquiry measurement - for domestic and USA-focused campaigns where applicable.",
     outcomeDetail:
       "The work supported a more structured digital presence and a measurable approach to audience engagement and enquiry generation.",
     results: null,

@@ -12,7 +12,7 @@ interface RevealProps {
   className?: string;
   as?: "div" | "span" | "li";
   /**
-   * Plays a single time by default, then stays put — content never hides
+   * Plays a single time by default, then stays put - content never hides
    * again once read. Pass false to re-animate on every pass.
    */
   once?: boolean;

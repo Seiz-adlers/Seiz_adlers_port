@@ -1,6 +1,6 @@
 /**
  * Only technologies actually used by Seiz Adlers. Edit this list as the
- * stack changes — nothing here should imply expertise not yet confirmed.
+ * stack changes - nothing here should imply expertise not yet confirmed.
  */
 export const technology = [
   "Next.js",

@@ -9,7 +9,7 @@ import { ReactLenis, useLenis } from "lenis/react";
  * Design notes:
  * - Keyboard (arrows / space / PageUp-Down) is left to the browser on purpose,
  *   so it stays instant and native. Only wheel + programmatic scroll are eased.
- * - `prefers-reduced-motion` fully bypasses Lenis — those users get pure native
+ * - `prefers-reduced-motion` fully bypasses Lenis - those users get pure native
  *   scrolling with no interception at all.
  * - `lerp` is kept conservative (0.09) so the page tracks the input closely
  *   rather than gliding on for half a second after the wheel stops.

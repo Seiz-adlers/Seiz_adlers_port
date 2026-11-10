@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
     title: insight.title,
     description: insight.excerpt,
     path: `/insights/${insight.slug}`,
-    // Unpublished drafts are thin placeholder pages — keep them out of search.
+    // Unpublished drafts are thin placeholder pages - keep them out of search.
     noIndex: insight.draft,
   });
 }
@@ -52,7 +52,7 @@ export default function InsightPage({ params }: { params: { slug: string } }) {
             </h1>
             {insight.draft && (
               <p className="mt-6 text-ink-secondary">
-                This article hasn&rsquo;t been published yet — check back soon, or start a
+                This article hasn&rsquo;t been published yet - check back soon, or start a
                 conversation with us in the meantime.
               </p>
             )}
